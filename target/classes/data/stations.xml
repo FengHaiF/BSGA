@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+  <CDHS.domain.OilStation>
+    <stationId>0</stationId>
+    <oilPipNum>2</oilPipNum>
+    <position>JS</position>
+    <stationEndTime>0</stationEndTime>
+    <speed>1</speed>
+  </CDHS.domain.OilStation>
+  <CDHS.domain.OilStation>
+    <stationId>1</stationId>
+    <oilPipNum>1</oilPipNum>
+    <position>JW</position>
+    <stationEndTime>0</stationEndTime>
+    <speed>2</speed>
+  </CDHS.domain.OilStation>
+</list>

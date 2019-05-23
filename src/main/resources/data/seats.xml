@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+  <CDHS.domain.Seat>
+    <seatType>0</seatType>
+    <seatId>0</seatId>
+    <seatSize>A</seatSize>
+    <oilFlag>true</oilFlag>
+    <dyFlag>true</dyFlag>
+    <stationPosition>JS</stationPosition>
+  </CDHS.domain.Seat>
+  <CDHS.domain.Seat>
+    <seatType>0</seatType>
+    <seatId>1</seatId>
+    <seatSize>A</seatSize>
+    <oilFlag>true</oilFlag>
+    <dyFlag>true</dyFlag>
+    <stationPosition>JS</stationPosition>
+  </CDHS.domain.Seat>
+  <CDHS.domain.Seat>
+    <seatType>0</seatType>
+    <seatId>2</seatId>
+    <seatSize>A</seatSize>
+    <oilFlag>true</oilFlag>
+    <dyFlag>true</dyFlag>
+    <stationPosition>JW</stationPosition>
+  </CDHS.domain.Seat>
+  <CDHS.domain.Seat>
+    <seatType>0</seatType>
+    <seatId>3</seatId>
+    <seatSize>A</seatSize>
+    <oilFlag>true</oilFlag>
+    <dyFlag>true</dyFlag>
+    <stationPosition>JW</stationPosition>
+  </CDHS.domain.Seat>
+</list>

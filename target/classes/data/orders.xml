@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+  <CDHS.domain.Order>
+    <orderId>0</orderId>
+  </CDHS.domain.Order>
+  <CDHS.domain.Order>
+    <orderId>1</orderId>
+  </CDHS.domain.Order>
+</list>
