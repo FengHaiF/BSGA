@@ -9,15 +9,12 @@ public class Operation {
     private double duration;    //持续时间
     private double start;
     private double end;    //开始结束时间
+    private double waitTime;
     private int operationType;
     private long previousSeatId;
     private double distTime;
-
-
-    public void setTime(double time){
-        setStart(time);
-        setEnd(time+duration);
-    }
+    private Operation previousOperation;
+    private Operation nextOperation;
 
     public Operation() {
     }
@@ -30,6 +27,7 @@ public class Operation {
         this.start = start;
         this.end = end;
         this.operationType = operationType;
+        this.waitTime = 0;
     }
 
     public String getStationPosition(){
@@ -114,6 +112,30 @@ public class Operation {
 
     public void setDistTime(double distTime) {
         this.distTime = distTime;
+    }
+
+    public Operation getPreviousOperation() {
+        return previousOperation;
+    }
+
+    public void setPreviousOperation(Operation previousOperation) {
+        this.previousOperation = previousOperation;
+    }
+
+    public Operation getNextOperation() {
+        return nextOperation;
+    }
+
+    public void setNextOperation(Operation nextOperation) {
+        this.nextOperation = nextOperation;
+    }
+
+    public double getWaitTime() {
+        return waitTime;
+    }
+
+    public void setWaitTime(double waitTime) {
+        this.waitTime = waitTime;
     }
 
     @Override

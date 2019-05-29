@@ -36,6 +36,7 @@ public class ShowFrame {
         Phenotype<AnyGene<AlleleF>, Vec<Float[]>> phenotype=result.getBestPhenotype();
         Solution solution = new Solution();
         solution.calculateMakespan(phenotype.getGenotype(),importer);
+//        System.out.println(solution.getOperationList());
 
         JFrame jf = new JFrame();
         Gantt gantt = new Gantt(solution,importer);

@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.fasterxml.jackson.databind.util.BeanUtil;
 import org.apache.commons.beanutils.BeanUtils;
 
 public class Importer {
@@ -62,9 +64,8 @@ public class Importer {
             oilStationMap.put(oilStation.getPosition(),oilStation);
 
         for (Seat seat : seatList) {
-            if(seat.isOilFlag()) {
-                int oilPipNum = oilStationMap.get(seat.getStationPosition()).getOilPipNum();
-                for (long i = 0; i < oilPipNum; i++) {
+            if (seat.isOilFlag()){
+                for (String s : seat.getStationList()) {
                     Seat seatOil = new Seat();
                     try {
                         BeanUtils.copyProperties(seatOil,seat);
@@ -73,12 +74,15 @@ public class Importer {
                     } catch (InvocationTargetException e) {
                         e.printStackTrace();
                     }
-                    seatOil.setOilPipId(i);
+                    //不实用pip
+                    seatOil.setOilPipId(0L);
+                    seatOil.setStationPosition(s);
                     oilSeatList.add(seatOil);
                 }
             }
-            if(seat.isDyFlag())
+            if (seat.isDyFlag()){
                 dySeatList.add(seat);
+            }
         }
 
         for (PlaneJZJ planeJZJ : planeList)
@@ -90,11 +94,11 @@ public class Importer {
         for (Order order : orderList)
             orderMap.put(order.getOrderId(),order);
 
-//        System.out.println(oilSeatList);
-//        System.out.println(dySeatList);
-//        System.out.println(planeList);
-//        System.out.println(oilStationList);
-//        System.out.println(orderList);
+        System.out.println(oilSeatList);
+        System.out.println(dySeatList);
+        System.out.println(planeList);
+        System.out.println(oilStationList);
+        System.out.println(orderList);
 
     }
 

@@ -1,5 +1,6 @@
 package CDHS.showframe;
 
+import CDHS.app.Setting;
 import CDHS.app.Solution;
 import CDHS.domain.Operation;
 import CDHS.domain.Seat;
@@ -10,6 +11,8 @@ import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.AffineTransform;
 import java.util.List;
+
+
 @SuppressWarnings("all")
 public class Gantt extends JPanel {
     private int starttime = 8 * 60;
@@ -70,13 +73,27 @@ public class Gantt extends JPanel {
             //  name+=":"+oex.o.get_duration();
             int strx = x + width / 2 - getStringWidth(name, g.getFont()) / 2;
             int stry = y - heigth / 2 + getStringHeight(name, g.getFont()) / 2;
-            g.drawString(name, strx, stry);
-            g.setColor(Color.GRAY);
+            if (operation.getOperationType()==2)
+                g.drawString(name,lt.x + (int)solution.getMakespan()*wZW+5, stry);
+            else
+                g.drawString(name, strx, stry);
+
+            if (operation.getWaitTime()!=0){
+                int waitWidth = (int) (operation.getWaitTime() * wZW);
+                g.setColor(Color.pink);
+                g.fillRect(x + width , y-heigth, waitWidth, heigth);
+            }
+
+            g.setColor(Color.lightGray);
             g.fillRect(x-width_tran, y-heigth, width_tran, heigth+1);
             g.setColor(Color.BLACK);
             //距离显示
 //            g.drawString(String.valueOf(trantime),x, y-heigth);
         }
+        //画最后makespan线
+        int x = (int)(lt.x + solution.getMakespan()*wZW);
+        g.drawLine(x, lb.y,x, lt.y);
+        g.drawString(String.valueOf(solution.getMakespan()), x, lb.y + 15);
     }
 
     private void drawAxis(Graphics2D g) {
@@ -91,7 +108,9 @@ public class Gantt extends JPanel {
             int y = (int) (lt.y + i * (hJZJ + 10) + (hJZJ + 10) / 2);
             g.drawLine(x, y, x + 2, y);
             String name = "F" + (i);
-            g.drawString(name, x - 20, y+5);
+            g.drawString(name, x - 25, y+5);
+//            String init = "M" + INIT_TABLE[i];
+//            g.drawString(init, x - 25, y+5);
         }
         strname="Aircraft";
         strx=50;
@@ -138,7 +157,7 @@ public class Gantt extends JPanel {
         if (operation.getSeat().getOilPipId() == null)
             name= "M"+(operation.getSeatId());
         else
-            name= "M"+(operation.getSeatId())+"-"+operation.getSeat().getStationPosition()+operation.getSeat().getOilPipId();
+            name= "M"+(operation.getSeatId())+"-"+operation.getSeat().getStationPosition();
         return name;
     }
 }

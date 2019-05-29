@@ -24,9 +24,11 @@ public class Setting {
     public static String DIST_PATH = Setting.class.getClassLoader().getResource("data/dist.xlsx").getPath();
 
     public static int[][] ORDER_TABLE = {
-            {0,1},
-            {1,0}
+            {0,1,2},
+            {1,0,2}
     };
+
+    public static long[] TAKEOFF_TABLE = {0,1,2,3,4,5,6,7,8,9,10,11,12,13};
 
     static {
         set(SetMode.SET_MODE_01);

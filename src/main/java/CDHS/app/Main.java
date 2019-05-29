@@ -2,15 +2,18 @@ package CDHS.app;
 
 import CDHS.GA.AlleleF;
 import CDHS.GA.GeneF;
+import CDHS.domain.Order;
+import CDHS.domain.Seat;
 import CDHS.persistence.Importer;
 import CDHS.showframe.ShowFrame;
 import io.jenetics.*;
 import io.jenetics.engine.*;
 import io.jenetics.ext.moea.NSGA2Selector;
+import io.jenetics.ext.moea.UFTournamentSelector;
 import io.jenetics.ext.moea.Vec;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.function.Predicate;
 
 
 @SuppressWarnings("all")
@@ -19,6 +22,10 @@ public class Main {
     static Importer importer = new Importer();
 
     public static void main(String[] args) {
+        startApp();
+    }
+
+    public static void startApp(){
         long start= System.currentTimeMillis();
 
         initialChromosomes();
@@ -28,12 +35,10 @@ public class Main {
         /**
          * solver
          */
-        SingleObjSolver(genotype);
-//        MultiObjSolver(genotype);
+//        SingleObjSolver(genotype);
+        MultiObjSolver(genotype);
 
         System.out.println(System.currentTimeMillis()-start);
-
-
 
     }
 
@@ -61,6 +66,7 @@ public class Main {
                         ()-> GeneF.generateAllele1(importer.getOrderList()),
                         importer.getPlaneList().size()
                 );
+
         System.out.println(chromosome3);
         chromosomes.add(chromosome3);
     }
@@ -68,9 +74,11 @@ public class Main {
     public static void MultiObjSolver(Genotype<AnyGene<AlleleF>> genotype){
         Engine<AnyGene<AlleleF>, Vec<Float[]>> engine = Engine
                 .builder(gt -> Vec.of(fitnessAndOccupy(gt,importer)),genotype)
+                .genotypeValidator(validator)
                 .populationSize(Setting.POPULATION_SIZE)
                 .offspringSelector(new TournamentSelector<>(4))
                 .survivorsSelector(NSGA2Selector.ofVec())
+//                .survivorsSelector(UFTournamentSelector.ofVec())
                 .optimize(Optimize.MINIMUM)
                 .build();
 
@@ -128,10 +136,30 @@ public class Main {
 
         Float makespan = (float)solution.calculateMakespan(genotype, importer);
         Float uselessOccupy = (float)solution.getUselessOccupy();
-        Float[] floats ={makespan,uselessOccupy};
-
+        Float totalDist = (float)solution.getTotalDist();
+//        makespan+=uselessOccupy;
+        Float[] floats ={makespan,totalDist};
 //        System.out.println(solution.getOperationList());
+//        System.out.println(uselessOccupy);
         return floats;
     }
 
+    public static Predicate<? super Genotype<AnyGene<AlleleF>>> validator = gt -> {
+        // Implement advanced Genotype check .
+        Set<Long> set = new HashSet<>();
+        Chromosome<AnyGene<AlleleF>> orderChromosome = gt.getChromosome(Setting.NUM_OF_MATAINANCE);
+        for (int i = 0; i < importer.getNumOfPlane(); i++) {
+            Order order = (Order) orderChromosome.getGene(i).getAllele();
+            int[] orderArray = Setting.ORDER_TABLE[(int) order.getOrderId()];
+            Chromosome<AnyGene<AlleleF>> chromosome = gt.getChromosome(orderArray[0]);
+            Seat seat = (Seat) chromosome.getGene(i).getAllele();
+            if(set.contains(seat.getSeatId())){
+                return false;
+            }
+            else {
+                set.add(seat.getSeatId());
+            }
+        }
+        return true;
+        };
 }

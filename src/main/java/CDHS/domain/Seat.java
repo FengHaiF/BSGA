@@ -2,6 +2,8 @@ package CDHS.domain;
 
 import CDHS.absplanner.AbstractSeat;
 
+import java.util.List;
+
 public class Seat extends AbstractSeat {
     private Long oilPipId;
 
@@ -10,7 +12,7 @@ public class Seat extends AbstractSeat {
         if (oilPipId == null){
             return "Seat-" + seatId;
         }else {
-            return "Seat-" + seatId + " " + this.getStationPosition() +"-"+ oilPipId;
+            return "Seat-" + seatId + " " + this.getStationPosition();
         }
     }
 
@@ -21,8 +23,8 @@ public class Seat extends AbstractSeat {
         super(_id, _type, _name);
     }
 
-    public Seat(int _id, int _type, String _name, int seatType, long seatId, String seatSize, boolean oilFlag, boolean dyFlag, String stationPosition, Long oilPipId) {
-        super(_id, _type, _name, seatType, seatId, seatSize, oilFlag, dyFlag, stationPosition);
+    public Seat(int _id, int _type, String _name, int seatType, long seatId, String seatSize, boolean oilFlag, boolean dyFlag, List<String> stationList, String stationPosition, Long oilPipId) {
+        super(_id, _type, _name, seatType, seatId, seatSize, oilFlag, dyFlag, stationList, stationPosition);
         this.oilPipId = oilPipId;
     }
 
