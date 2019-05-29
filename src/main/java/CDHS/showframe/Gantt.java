@@ -39,8 +39,9 @@ public class Gantt extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
-        drawAxis(g2d);
+
         drawItem(g2d);
+        drawAxis(g2d);
     }
 
     private void init() {
@@ -78,14 +79,20 @@ public class Gantt extends JPanel {
             else
                 g.drawString(name, strx, stry);
 
+            //粉色为等待
+            if(operation.getPreviousOperation()==null&&operation.getStart()!=0) {
+                int waitWidth = (int) (operation.getStart() * wZW);
+                g.setColor(Color.pink);
+                g.fillRect(lt.x , y-heigth, waitWidth, heigth);
+            }
             if (operation.getWaitTime()!=0){
                 int waitWidth = (int) (operation.getWaitTime() * wZW);
                 g.setColor(Color.pink);
-                g.fillRect(x + width , y-heigth, waitWidth, heigth);
+                g.fillRect(x + width + 1, y-heigth, waitWidth-1, heigth+1);
             }
 
             g.setColor(Color.lightGray);
-            g.fillRect(x-width_tran, y-heigth, width_tran, heigth+1);
+            g.fillRect(x-width_tran +1, y-heigth, width_tran, heigth+1);
             g.setColor(Color.BLACK);
             //距离显示
 //            g.drawString(String.valueOf(trantime),x, y-heigth);

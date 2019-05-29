@@ -2,49 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="059adca4-838d-4422-b640-df42e167d4cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CDHS/app/WebApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CDHS/controller/controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CDHS/echart/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CDHS/persistence/ToXml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/domain/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/domain/Seat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/dist.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/dist.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/planes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/planes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/seats.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/seats.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/stations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/stations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/GA/AlleleF.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/GA/AlleleF.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/GA/GeneF.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/GA/GeneF.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/absplanner/AbstractPlane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/absplanner/AbstractPlane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/absplanner/AbstractSeat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/absplanner/AbstractSeat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/SetMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/SetMode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/Setting$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/Setting$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/Setting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/OilStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/OilStation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/Operation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/PlaneJZJ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/PlaneJZJ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/Seat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/exampleTest/Demo1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/exampleTest/Demo1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/persistence/Importer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/persistence/Importer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/persistence/XmlIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/persistence/XmlIO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/showframe/Gantt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/showframe/Gantt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/showframe/ShowFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/showframe/ShowFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/seats.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/seats.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/stations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/stations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data/dist.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/dist.xlsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,12 +20,12 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file pinned="false" current-in-tab="false">
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="991">
-                    <caret line="59" column="26" lean-forward="true" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+                  <state relative-caret-position="1073">
+                    <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -74,8 +36,8 @@
             <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-737">
-                    <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+                  <state relative-caret-position="312">
+                    <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -83,14 +45,13 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="316">
-                    <caret line="274" column="26" selection-start-line="274" selection-start-column="26" selection-end-line="274" selection-end-column="26" />
+                  <state relative-caret-position="1851">
+                    <caret line="211" column="28" selection-start-line="211" selection-start-column="28" selection-end-line="211" selection-end-column="28" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="method#operationListInit#0;class#Solution#0" />
                     </folding>
                   </state>
                 </provider>
@@ -106,16 +67,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+            <state relative-caret-position="297">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#400#424#0" expanded="true" />
-                <element signature="e#602#603#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#655#656#0" expanded="true" />
                 <element signature="method#SingleObjSolver#0;class#Main#0" />
                 <element signature="method#printM#0;class#Main#0" />
-                <element signature="e#5328#5815#0" />
               </folding>
             </state>
           </provider>
@@ -124,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/echart/echart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
+            <state relative-caret-position="162">
               <caret line="6" selection-start-line="6" selection-end-line="7" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -136,37 +94,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="206" column="44" lean-forward="true" selection-start-line="206" selection-start-column="44" selection-end-line="206" selection-end-column="44" />
+            <state relative-caret-position="3996">
+              <caret line="206" column="44" selection-start-line="206" selection-start-column="44" selection-end-line="206" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1278#1279#0" expanded="true" />
-                <element signature="e#1300#1301#0" expanded="true" />
-                <element signature="e#4169#4170#0" expanded="true" />
-                <element signature="e#4233#4234#0" expanded="true" />
-                <element signature="e#4269#4270#0" expanded="true" />
-                <element signature="e#4294#4295#0" expanded="true" />
-                <element signature="e#4689#4690#0" expanded="true" />
-                <element signature="e#4728#4729#0" expanded="true" />
+                <element signature="e#4153#4154#0" expanded="true" />
                 <element signature="e#4185#4186#0" expanded="true" />
+                <element signature="e#4243#4244#0" expanded="true" />
                 <element signature="e#4285#4286#0" expanded="true" />
+                <element signature="e#4324#4325#0" expanded="true" />
                 <element signature="e#4355#4356#0" expanded="true" />
+                <element signature="e#4407#4408#0" expanded="true" />
                 <element signature="e#4447#4448#0" expanded="true" />
+                <element signature="e#4489#4490#0" expanded="true" />
                 <element signature="e#4523#4524#0" expanded="true" />
+                <element signature="e#4581#4582#0" expanded="true" />
                 <element signature="e#4627#4628#0" expanded="true" />
+                <element signature="e#4668#4669#0" expanded="true" />
                 <element signature="e#4701#4702#0" expanded="true" />
+                <element signature="e#4757#4758#0" expanded="true" />
                 <element signature="e#4801#4802#0" expanded="true" />
+                <element signature="e#4852#4853#0" expanded="true" />
                 <element signature="e#4889#4890#0" expanded="true" />
+                <element signature="e#4959#4960#0" expanded="true" />
                 <element signature="e#5011#5012#0" expanded="true" />
+                <element signature="e#5052#5053#0" expanded="true" />
                 <element signature="e#5084#5085#0" expanded="true" />
+                <element signature="e#5139#5140#0" expanded="true" />
                 <element signature="e#5181#5182#0" expanded="true" />
+                <element signature="e#5223#5224#0" expanded="true" />
                 <element signature="e#5254#5255#0" expanded="true" />
+                <element signature="e#5309#5310#0" expanded="true" />
                 <element signature="e#5353#5354#0" expanded="true" />
+                <element signature="e#5396#5397#0" expanded="true" />
                 <element signature="e#5428#5429#0" expanded="true" />
+                <element signature="e#5485#5486#0" expanded="true" />
                 <element signature="e#5531#5532#0" expanded="true" />
+                <element signature="e#5576#5577#0" expanded="true" />
                 <element signature="e#5610#5611#0" expanded="true" />
+                <element signature="e#5671#5672#0" expanded="true" />
                 <element signature="e#5721#5722#0" expanded="true" />
+                <element signature="e#5764#5765#0" expanded="true" />
                 <element signature="e#5796#5797#0" expanded="true" />
+                <element signature="e#5853#5854#0" expanded="true" />
                 <element signature="e#5899#5900#0" expanded="true" />
               </folding>
             </state>
@@ -176,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/WebApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="162">
               <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -188,14 +158,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1157">
-              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="-348">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1869#1870#0" expanded="true" />
-                <element signature="e#1903#1904#0" expanded="true" />
-                <element signature="e#1963#1964#0" expanded="true" />
-                <element signature="e#2009#2010#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -204,8 +170,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/data/seats.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="905">
-              <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+            <state relative-caret-position="1016">
+              <caret line="193" column="32" lean-forward="true" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -213,26 +179,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/data/stations.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="972">
               <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/data/planes.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2295">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="314">
+              <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+            <state relative-caret-position="729">
+              <caret line="38" column="58" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,14 +209,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-864">
+            <state relative-caret-position="432">
               <caret line="16" column="35" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="35" />
-              <folding>
-                <element signature="e#2389#2390#0" expanded="true" />
-                <element signature="e#2420#2421#0" expanded="true" />
-                <element signature="e#2983#2984#0" expanded="true" />
-                <element signature="e#3023#3024#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -306,13 +266,13 @@
         <option value="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data/stations.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/data/planes.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/data/seats.xml" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/data/seats.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" />
       </list>
     </option>
   </component>
@@ -368,6 +328,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -493,8 +455,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -644,17 +604,18 @@
       <workItem from="1558767699710" duration="1163000" />
       <workItem from="1558841874521" duration="6909000" />
       <workItem from="1559005114396" duration="54128000" />
+      <workItem from="1559128854319" duration="2090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170702000" />
+    <option name="totallyTimeSpent" value="172764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18508998" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18766066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -664,13 +625,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47978437" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6091644" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45822102" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5336927" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.39218327" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.2277628" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -767,7 +728,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java</url>
-          <line>285</line>
+          <line>289</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -776,13 +737,25 @@
     <watches-manager>
       <configuration name="Application">
         <watch expression="seatList" language="JAVA" />
+        <watch expression="Setting.DIST_TABLE" language="JAVA" />
         <watch expression="genotype" language="JAVA" />
         <watch expression="operationList" language="JAVA" />
+        <watch expression="distTable.get((int)previous).get((int)operation.getSeatId())" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>Setting.DIST_TABLE</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>distTable.get((int)previous).get((int)operation.getSeatId())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>operationList</expression-string>
         <language-id>JAVA</language-id>
@@ -820,11 +793,6 @@
       </expression>
       <expression>
         <expression-string>numOfMatainance</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>importer.getPlaneList().size()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1055,44 +1023,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/planes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2295">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/seats.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="905">
-          <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1157">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1869#1870#0" expanded="true" />
-            <element signature="e#1903#1904#0" expanded="true" />
-            <element signature="e#1963#1964#0" expanded="true" />
-            <element signature="e#2009#2010#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/stations.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="972">
           <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/WebApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="162">
           <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1102,7 +1042,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/echart/echart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
+        <state relative-caret-position="162">
           <caret line="6" selection-start-line="6" selection-end-line="7" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1119,95 +1059,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="206" column="44" lean-forward="true" selection-start-line="206" selection-start-column="44" selection-end-line="206" selection-end-column="44" />
+        <state relative-caret-position="3996">
+          <caret line="206" column="44" selection-start-line="206" selection-start-column="44" selection-end-line="206" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1278#1279#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#4169#4170#0" expanded="true" />
-            <element signature="e#4233#4234#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
-            <element signature="e#4294#4295#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#4728#4729#0" expanded="true" />
+            <element signature="e#4153#4154#0" expanded="true" />
             <element signature="e#4185#4186#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
             <element signature="e#4285#4286#0" expanded="true" />
+            <element signature="e#4324#4325#0" expanded="true" />
             <element signature="e#4355#4356#0" expanded="true" />
+            <element signature="e#4407#4408#0" expanded="true" />
             <element signature="e#4447#4448#0" expanded="true" />
+            <element signature="e#4489#4490#0" expanded="true" />
             <element signature="e#4523#4524#0" expanded="true" />
+            <element signature="e#4581#4582#0" expanded="true" />
             <element signature="e#4627#4628#0" expanded="true" />
+            <element signature="e#4668#4669#0" expanded="true" />
             <element signature="e#4701#4702#0" expanded="true" />
+            <element signature="e#4757#4758#0" expanded="true" />
             <element signature="e#4801#4802#0" expanded="true" />
+            <element signature="e#4852#4853#0" expanded="true" />
             <element signature="e#4889#4890#0" expanded="true" />
+            <element signature="e#4959#4960#0" expanded="true" />
             <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5052#5053#0" expanded="true" />
             <element signature="e#5084#5085#0" expanded="true" />
+            <element signature="e#5139#5140#0" expanded="true" />
             <element signature="e#5181#5182#0" expanded="true" />
+            <element signature="e#5223#5224#0" expanded="true" />
             <element signature="e#5254#5255#0" expanded="true" />
+            <element signature="e#5309#5310#0" expanded="true" />
             <element signature="e#5353#5354#0" expanded="true" />
+            <element signature="e#5396#5397#0" expanded="true" />
             <element signature="e#5428#5429#0" expanded="true" />
+            <element signature="e#5485#5486#0" expanded="true" />
             <element signature="e#5531#5532#0" expanded="true" />
+            <element signature="e#5576#5577#0" expanded="true" />
             <element signature="e#5610#5611#0" expanded="true" />
+            <element signature="e#5671#5672#0" expanded="true" />
             <element signature="e#5721#5722#0" expanded="true" />
+            <element signature="e#5764#5765#0" expanded="true" />
             <element signature="e#5796#5797#0" expanded="true" />
+            <element signature="e#5853#5854#0" expanded="true" />
             <element signature="e#5899#5900#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-737">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864">
+        <state relative-caret-position="432">
           <caret line="16" column="35" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="e#2389#2390#0" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2983#2984#0" expanded="true" />
-            <element signature="e#3023#3024#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+        <state relative-caret-position="297">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#400#424#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
             <element signature="method#SingleObjSolver#0;class#Main#0" />
             <element signature="method#printM#0;class#Main#0" />
-            <element signature="e#5328#5815#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="991">
-          <caret line="59" column="26" lean-forward="true" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+        <state relative-caret-position="729">
+          <caret line="38" column="58" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-348">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/seats.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1016">
+          <caret line="193" column="32" lean-forward="true" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1216,12 +1166,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="274" column="26" selection-start-line="274" selection-start-column="26" selection-end-line="274" selection-end-column="26" />
+        <state relative-caret-position="1851">
+          <caret line="211" column="28" selection-start-line="211" selection-start-column="28" selection-end-line="211" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#operationListInit#0;class#Solution#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1073">
+          <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/planes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
         </state>
       </provider>
     </entry>

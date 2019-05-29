@@ -144,7 +144,7 @@ public class Solution {
         totalDist = 0;
         uselessOccupy = 0;
         List<List<Double>> distTable = Setting.DIST_TABLE;
-        for (int j = 0; j < numOfMatainance; j++) {
+        for (int j = 0; j <= numOfMatainance; j++) {
             for (int i = 0; i < importer.getNumOfPlane(); i++) {
                 Order order = (Order) orderChromosome.getGene(i).getAllele();
 
@@ -172,13 +172,12 @@ public class Solution {
                 operation.setPreviousSeatId(previous);
                 operation.setDistTime(distTable.get((int)previous).get((int)operation.getSeatId()));
 
-                //不为第一个时
+
                 //设置开始时间，根据前一个operation的时间、站位结束时间、管道占用结束时间来确定
-//                if (j != 0) {
                 startTime = Math.max(lastOperationTime, seatEndTimeMap.get(operation.getSeatId()));
                 if (operation.getOperationType() == 0)
                     startTime = Math.max(startTime, pipEndTimeMap.get(operation.getStationPosition()).get(operation.getPipId()));
-//                }
+
 
                 //设置拖行时间，如果和前一个operation之间不足则延长时间
                 if (startTime-lastOperationTime < operation.getDistTime())
@@ -206,10 +205,15 @@ public class Solution {
                     uselessOccupy += tempTime;
 
                 //更新
+
                 if (operation.getOperationType()==0)
                     pipEndTimeMap.get(operation.getStationPosition()).replace(operation.getPipId(),newEndTime);
                 totalDist += operation.getDistTime();
-                seatEndTimeMap.replace(operation.getSeatId(),newEndTime);
+                //设置最后站位已经占用
+                if (j == numOfMatainance){
+                    seatEndTimeMap.replace(operation.getSeatId(),Double.MAX_VALUE);
+                }else
+                    seatEndTimeMap.replace(operation.getSeatId(),newEndTime);
                 makespan = Math.max(makespan,newEndTime);
 
             }
