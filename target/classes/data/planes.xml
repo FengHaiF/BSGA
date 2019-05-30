@@ -6,7 +6,7 @@
     <task>ZZ</task>
     <planeType>ZDJ</planeType>
     <planeSize>A</planeSize>
-    <oilMax>10</oilMax>
+    <oilMax>20</oilMax>
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
@@ -16,7 +16,7 @@
     <task>ZZ</task>
     <planeType>ZDJ</planeType>
     <planeSize>A</planeSize>
-    <oilMax>10</oilMax>
+    <oilMax>20</oilMax>
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
