@@ -1,10 +1,7 @@
 package CDHS.app;
 
 import CDHS.GA.AlleleF;
-import CDHS.domain.OilStation;
-import CDHS.domain.Operation;
-import CDHS.domain.Order;
-import CDHS.domain.Seat;
+import CDHS.domain.*;
 import CDHS.persistence.Importer;
 import io.jenetics.AnyGene;
 import io.jenetics.Chromosome;
@@ -13,9 +10,9 @@ import io.jenetics.Genotype;
 import java.util.*;
 
 public class Solution {
-    private LinkedList<Operation> operationLinkedList = new LinkedList<>();
     private List<Operation> operationList = new ArrayList<>();
     private Map<Integer,Operation> operationMap = new HashMap<>();
+    private Map<Long,List<Operation>> seatOperationMap = new HashMap<>();
     private Map<Long,Double> seatEndTimeMap = new HashMap<>();
     private Map<String,Map<Long,Double>> pipEndTimeMap = new HashMap<>();
     private Map<Long,List<Operation>> operationPlaneMap = new HashMap<>();
@@ -103,6 +100,7 @@ public class Solution {
 
         for (Seat seat : importer.getSeatList()) {
             seatEndTimeMap.put(seat.getSeatId(),0.0);
+            seatOperationMap.put(seat.getSeatId(),new ArrayList<>());
         }
 
         //初始化油管时间
@@ -170,8 +168,6 @@ public class Solution {
 
     List<List<Double>> distTable = Setting.DIST_TABLE;
 
-
-
     long previous;
 
     double startTime;
@@ -198,13 +194,14 @@ public class Solution {
 
 
         //设置开始时间，根据前一个operation的时间、站位结束时间、管道占用结束时间来确定
-        startTime = Math.max(lastOperationTime, seatEndTimeMap.get(operation.getSeatId()));
+//        if (lastOperationTime-operation.getDistTime())
+        startTime = Math.max(lastOperationTime+operation.getDistTime(), seatEndTimeMap.get(operation.getSeatId()));
         if (operation.getOperationType() == 0)
             startTime = Math.max(startTime, pipEndTimeMap.get(operation.getStationPosition()).get(operation.getPipId()));
 
         //设置拖行时间，如果和前一个operation之间不足则延长时间
-        if (startTime-lastOperationTime < operation.getDistTime())
-            startTime += operation.getDistTime();
+//        if (startTime-lastOperationTime < operation.getDistTime())
+//            startTime += operation.getDistTime();
         operation.setStart(startTime);
 
         //设置前一个等待，并更新站位时间
@@ -214,6 +211,9 @@ public class Solution {
                 double endRefresh = startTime - operation.getDistTime();
                 previousOperation.setWaitTime(endRefresh-lastOperationTime);
                 previousOperation.setEnd(endRefresh);
+//                //时间碰撞检测
+//                if (endRefresh <= seatEndTimeMap.get(previousOperation.getSeatId()))
+//                    makespan += 5000.0;
                 seatEndTimeMap.put(previousOperation.getSeatId(),endRefresh);
             }
         }
@@ -234,9 +234,13 @@ public class Solution {
         totalDist += operation.getDistTime();
         //设置最后站位已经占用
         if (operation.getNextOperation()==null){
-            seatEndTimeMap.replace(operation.getSeatId(),Double.MAX_VALUE);
-        }else
-            seatEndTimeMap.replace(operation.getSeatId(),newEndTime);
+            seatEndTimeMap.replace(operation.getSeatId(),5000.0);
+        }else {
+//            if (seatEndTimeMap.get(operation.getSeatId())<newEndTime)
+                seatEndTimeMap.replace(operation.getSeatId(), newEndTime);
+//            else
+//                makespan+=5000;
+        }
         makespan = Math.max(makespan,newEndTime);
 
         //替换下一个执行的operation
@@ -249,10 +253,32 @@ public class Solution {
 
         //更新选择常数
         witch = chooseExcute();
+        seatOperationMap.get(operation.getSeatId()).add(operation);
     }
 
+    if (isTimeConflict(importer))
+        makespan += 5000;
+    //按照站位再重新梳理一遍
+
 //        operationList.stream().filter(operation -> operation.getOperationType() == 0).forEach(operation -> System.out.println(operation));
-        System.out.println(operationList);
+//        System.out.println(operationList);
         return makespan;
     }
+
+    private boolean isTimeConflict(Importer importer){
+        for (Seat seat : importer.getSeatList()){
+            long seatId = seat.getSeatId();
+            int size = seatOperationMap.get(seatId).size();
+            for (int i = 0; i < size;i++) {
+                Operation operation = seatOperationMap.get(seatId).get(i);
+                for (int j = i+1; j < size; j++) {
+                    Operation otherOperation = seatOperationMap.get(seatId).get(j);
+                    if (!(operation.getStart() >= otherOperation.getEnd()||operation.getEnd() <= otherOperation.getStart()))
+                        return true;
+                }
+            }
+        }
+        return false;
+    }
+
 }

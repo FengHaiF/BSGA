@@ -99,6 +99,7 @@ public class Gantt extends JPanel {
         }
         //画最后makespan线
         int x = (int)(lt.x + solution.getMakespan()*wZW);
+//        System.out.println("Print" + solution.getMakespan());
         g.drawLine(x, lb.y,x, lt.y);
         g.drawString(String.valueOf(solution.getMakespan()), x, lb.y + 15);
     }

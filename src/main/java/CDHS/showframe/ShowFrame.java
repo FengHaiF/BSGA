@@ -16,9 +16,9 @@ import java.awt.*;
 @SuppressWarnings("all")
 public class ShowFrame {
 
-    public void SOGA_ShowFrame(EvolutionResult<AnyGene<AlleleF>, Float> result, Importer importer) {
+    public void SOGA_ShowFrame(Phenotype<AnyGene<AlleleF>, Float> phenotype, Importer importer) {
+        System.out.println("show: G="+phenotype.getGeneration()+" "+phenotype);
 
-        Phenotype<AnyGene<AlleleF>,Float> phenotype=result.getBestPhenotype();
         Solution solution = new Solution();
         solution.calculateMakespan(phenotype.getGenotype(),importer);
 
@@ -31,9 +31,12 @@ public class ShowFrame {
         jf.setVisible(true);
     }
 
-    public void MOGA_ShowFrame(EvolutionResult<AnyGene<AlleleF>, Vec<Float[]>> result, Importer importer) {
+    public void MOGA_ShowFrame(Phenotype<AnyGene<AlleleF>, Vec<Float[]>> phenotype, Importer importer) {
 
-        Phenotype<AnyGene<AlleleF>, Vec<Float[]>> phenotype=result.getBestPhenotype();
+//        Phenotype<AnyGene<AlleleF>, Vec<Float[]>> phenotype=result.getBestPhenotype();
+//        System.out.println("show: G="+result.getGeneration()+" "+result.getBestPhenotype());
+        System.out.println("show: G="+phenotype.getGeneration()+" "+phenotype+phenotype.getFitness());
+
         Solution solution = new Solution();
         solution.calculateMakespan(phenotype.getGenotype(),importer);
 //        System.out.println(solution.getOperationList());

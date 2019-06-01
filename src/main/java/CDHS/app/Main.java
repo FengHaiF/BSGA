@@ -8,9 +8,13 @@ import CDHS.persistence.Importer;
 import CDHS.showframe.ShowFrame;
 import io.jenetics.*;
 import io.jenetics.engine.*;
+import io.jenetics.ext.moea.MOEA;
 import io.jenetics.ext.moea.NSGA2Selector;
 import io.jenetics.ext.moea.UFTournamentSelector;
 import io.jenetics.ext.moea.Vec;
+import io.jenetics.util.DoubleRange;
+import io.jenetics.util.ISeq;
+import io.jenetics.util.IntRange;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -82,13 +86,43 @@ public class Main {
                 .optimize(Optimize.MINIMUM)
                 .build();
 
-        EvolutionResult<AnyGene<AlleleF>, Vec<Float[]>> collect = engine
+//求帕累托集
+        ISeq<Phenotype<AnyGene<AlleleF>, Vec<Float[]>>> collect = engine
                 .stream()
                 .limit(Setting.LIMIT_GENERATION)
                 .peek(Main::printM)
-                .collect(EvolutionResult.toBestEvolutionResult());
+//                .collect(EvolutionResult.toBestPhenotype());
+                .collect(MOEA.toParetoSet(IntRange.of(20,30)));
+        System.out.println(collect);
 
-        new ShowFrame().MOGA_ShowFrame(collect,importer);
+        Phenotype<AnyGene<AlleleF>, Vec<Float[]>> firstGeneVecPhenotype = collect.get(0);
+        Float makespan = firstGeneVecPhenotype.getFitness().data()[0];
+        Float dist = firstGeneVecPhenotype.getFitness().data()[1];
+
+        int which = 0;
+        for (int i = 1; i < collect.size(); i++) {
+            Phenotype<AnyGene<AlleleF>, Vec<Float[]>> anyGeneVecPhenotype = collect.get(i);
+            Float newMakespan = anyGeneVecPhenotype.getFitness().data()[0];
+            if (makespan > newMakespan){
+                makespan = newMakespan;
+                which = i;
+            }
+            else if ( makespan == newMakespan ){
+                Float newDist = anyGeneVecPhenotype.getFitness().data()[1];
+                if ( dist > newDist){
+                    which = i;
+                }
+            }
+        }
+
+        Phenotype<AnyGene<AlleleF>, Vec<Float[]>> bestPhenotype = collect.get(which);
+
+        System.out.println("--- ParetoSet --- ");
+        for (Phenotype<AnyGene<AlleleF>, Vec<Float[]>> anyGeneVecPhenotype : collect) {
+            System.out.println(anyGeneVecPhenotype);
+        }
+
+        new ShowFrame().MOGA_ShowFrame(bestPhenotype,importer);
     }
 
     public static void SingleObjSolver(Genotype<AnyGene<AlleleF>> genotype){
@@ -97,11 +131,11 @@ public class Main {
                 .populationSize(Setting.POPULATION_SIZE)
                 .optimize(Optimize.MINIMUM)
                 .build();
-        EvolutionResult<AnyGene<AlleleF>, Float> result = engine
+        Phenotype<AnyGene<AlleleF>, Float> result = engine
                 .stream()
                 .limit(Setting.LIMIT_GENERATION)
                 .peek(Main::printS)
-                .collect(EvolutionResult.toBestEvolutionResult());
+                .collect(EvolutionResult.toBestPhenotype());
 
         new ShowFrame().SOGA_ShowFrame(result,importer);
     }
@@ -119,7 +153,9 @@ public class Main {
                 result.getPopulation()) {
             System.out.println(result.getGeneration()+":"+phenotype);
         }
+//        Vec<Float[]> fitness = result.getPopulation().get(0).getFitness();
         System.out.println(result.getGeneration()+" best:"+result.getBestPhenotype());
+        System.out.println(result.getGeneration()+"fitness"+result.getBestFitness());
     }
 
     public static float fitnessS(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
@@ -138,7 +174,7 @@ public class Main {
         Float uselessOccupy = (float)solution.getUselessOccupy();
         Float totalDist = (float)solution.getTotalDist();
 //        makespan+=uselessOccupy;
-        Float[] floats ={makespan,totalDist};
+        Float[] floats ={makespan,totalDist,uselessOccupy};
 //        System.out.println(solution.getOperationList());
 //        System.out.println(uselessOccupy);
         return floats;
@@ -160,6 +196,10 @@ public class Main {
                 set.add(seat.getSeatId());
             }
         }
+
+        if (fitnessS(gt,importer) > 5000.0)
+            return false;
+
         return true;
         };
 }
