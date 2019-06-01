@@ -10,9 +10,7 @@ import io.jenetics.*;
 import io.jenetics.engine.*;
 import io.jenetics.ext.moea.MOEA;
 import io.jenetics.ext.moea.NSGA2Selector;
-import io.jenetics.ext.moea.UFTournamentSelector;
 import io.jenetics.ext.moea.Vec;
-import io.jenetics.util.DoubleRange;
 import io.jenetics.util.ISeq;
 import io.jenetics.util.IntRange;
 
@@ -43,7 +41,6 @@ public class Main {
         MultiObjSolver(genotype);
 
         System.out.println(System.currentTimeMillis()-start);
-
     }
 
     public static void initialChromosomes(){
@@ -77,7 +74,7 @@ public class Main {
 
     public static void MultiObjSolver(Genotype<AnyGene<AlleleF>> genotype){
         Engine<AnyGene<AlleleF>, Vec<Float[]>> engine = Engine
-                .builder(gt -> Vec.of(fitnessAndOccupy(gt,importer)),genotype)
+                .builder(gt -> Vec.of(fitnessAndDist(gt,importer)),genotype)
                 .genotypeValidator(validator)
                 .populationSize(Setting.POPULATION_SIZE)
                 .offspringSelector(new TournamentSelector<>(4))
@@ -93,29 +90,8 @@ public class Main {
                 .peek(Main::printM)
 //                .collect(EvolutionResult.toBestPhenotype());
                 .collect(MOEA.toParetoSet(IntRange.of(20,30)));
-        System.out.println(collect);
 
-        Phenotype<AnyGene<AlleleF>, Vec<Float[]>> firstGeneVecPhenotype = collect.get(0);
-        Float makespan = firstGeneVecPhenotype.getFitness().data()[0];
-        Float dist = firstGeneVecPhenotype.getFitness().data()[1];
-
-        int which = 0;
-        for (int i = 1; i < collect.size(); i++) {
-            Phenotype<AnyGene<AlleleF>, Vec<Float[]>> anyGeneVecPhenotype = collect.get(i);
-            Float newMakespan = anyGeneVecPhenotype.getFitness().data()[0];
-            if (makespan > newMakespan){
-                makespan = newMakespan;
-                which = i;
-            }
-            else if ( makespan == newMakespan ){
-                Float newDist = anyGeneVecPhenotype.getFitness().data()[1];
-                if ( dist > newDist){
-                    which = i;
-                }
-            }
-        }
-
-        Phenotype<AnyGene<AlleleF>, Vec<Float[]>> bestPhenotype = collect.get(which);
+        Phenotype<AnyGene<AlleleF>, Vec<Float[]>> bestPhenotype = collect.get(getSeqOfBestPhenotye(collect));
 
         System.out.println("--- ParetoSet --- ");
         for (Phenotype<AnyGene<AlleleF>, Vec<Float[]>> anyGeneVecPhenotype : collect) {
@@ -138,46 +114,6 @@ public class Main {
                 .collect(EvolutionResult.toBestPhenotype());
 
         new ShowFrame().SOGA_ShowFrame(result,importer);
-    }
-
-    private static void printS(final EvolutionResult<AnyGene<AlleleF>, Float> result) {
-        for (Phenotype<AnyGene<AlleleF>, Float> phenotype:
-        result.getPopulation()) {
-            System.out.println(result.getGeneration()+":"+phenotype);
-        }
-        System.out.println(result.getGeneration()+" best:"+result.getBestPhenotype());
-    }
-
-    private static void printM(EvolutionResult<AnyGene<AlleleF>, Vec<Float[]>> result) {
-        for (Phenotype<AnyGene<AlleleF>, Vec<Float[]>> phenotype:
-                result.getPopulation()) {
-            System.out.println(result.getGeneration()+":"+phenotype);
-        }
-//        Vec<Float[]> fitness = result.getPopulation().get(0).getFitness();
-        System.out.println(result.getGeneration()+" best:"+result.getBestPhenotype());
-        System.out.println(result.getGeneration()+"fitness"+result.getBestFitness());
-    }
-
-    public static float fitnessS(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
-        Solution  solution= new Solution();
-
-        double makespan = solution.calculateMakespan(genotype, importer);
-
-//        System.out.println(solution.getOperationList());
-        return (float)makespan;
-    }
-
-    public static Float[] fitnessAndOccupy(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
-        Solution  solution= new Solution();
-
-        Float makespan = (float)solution.calculateMakespan(genotype, importer);
-        Float uselessOccupy = (float)solution.getUselessOccupy();
-        Float totalDist = (float)solution.getTotalDist();
-//        makespan+=uselessOccupy;
-        Float[] floats ={makespan,totalDist,uselessOccupy};
-//        System.out.println(solution.getOperationList());
-//        System.out.println(uselessOccupy);
-        return floats;
     }
 
     public static Predicate<? super Genotype<AnyGene<AlleleF>>> validator = gt -> {
@@ -203,4 +139,68 @@ public class Main {
 
         return true;
         };
+
+    private static int getSeqOfBestPhenotye(ISeq<Phenotype<AnyGene<AlleleF>, Vec<Float[]>>> collect){
+        Phenotype<AnyGene<AlleleF>, Vec<Float[]>> firstGeneVecPhenotype = collect.get(0);
+        Float makespan = firstGeneVecPhenotype.getFitness().data()[0];
+        Float dist = firstGeneVecPhenotype.getFitness().data()[1];
+
+        int which = 0;
+        for (int i = 1; i < collect.size(); i++) {
+            Phenotype<AnyGene<AlleleF>, Vec<Float[]>> anyGeneVecPhenotype = collect.get(i);
+            Float newMakespan = anyGeneVecPhenotype.getFitness().data()[0];
+            if (makespan > newMakespan){
+                makespan = newMakespan;
+                which = i;
+            }
+            else if ( makespan == newMakespan ){
+                Float newDist = anyGeneVecPhenotype.getFitness().data()[1];
+                if ( dist > newDist){
+                    which = i;
+                }
+            }
+        }
+        return which;
+    }
+
+    private static void printS(final EvolutionResult<AnyGene<AlleleF>, Float> result) {
+        for (Phenotype<AnyGene<AlleleF>, Float> phenotype:
+                result.getPopulation()) {
+            System.out.println(result.getGeneration()+":"+phenotype);
+        }
+        System.out.println(result.getGeneration()+" best:"+result.getBestPhenotype());
+    }
+
+    private static void printM(EvolutionResult<AnyGene<AlleleF>, Vec<Float[]>> result) {
+        for (Phenotype<AnyGene<AlleleF>, Vec<Float[]>> phenotype:
+                result.getPopulation()) {
+            System.out.println(result.getGeneration()+":"+phenotype);
+        }
+//        Vec<Float[]> fitness = result.getPopulation().get(0).getFitness();
+        System.out.println(result.getGeneration()+" best:"+result.getBestPhenotype());
+        System.out.println(result.getGeneration()+"fitness"+result.getBestFitness());
+    }
+
+    public static float fitnessS(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
+        Solution  solution= new Solution();
+
+        double makespan = solution.calculateMakespan(genotype, importer);
+
+//        System.out.println(solution.getOperationList());
+        return (float)makespan;
+    }
+
+    public static Float[] fitnessAndDist(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
+        Solution  solution= new Solution();
+
+        Float makespan = (float)solution.calculateMakespan(genotype, importer);
+        Float uselessOccupy = (float)solution.getUselessOccupy();
+        Float totalDist = (float)solution.getTotalDist();
+//        makespan+=uselessOccupy;
+        Float[] floats ={makespan,totalDist,uselessOccupy};
+//        System.out.println(solution.getOperationList());
+//        System.out.println(uselessOccupy);
+        return floats;
+    }
+
 }

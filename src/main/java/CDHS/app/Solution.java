@@ -68,6 +68,7 @@ public class Solution {
     private void operationListInit(Genotype<AnyGene<AlleleF>> genotype, Importer importer){
         int numOfPlane = importer.getNumOfPlane();
 
+        //初始化operation，最后添加了起飞布列站位的operation
         for (int j = 0; j < numOfPlane; j++) {
             for (int i = 0; i < numOfMatainance; i++) {
                 Chromosome<AnyGene<AlleleF>> chromosome = genotype.getChromosome(i);
@@ -103,7 +104,6 @@ public class Solution {
             seatOperationMap.put(seat.getSeatId(),new ArrayList<>());
         }
 
-        //初始化油管时间
         for (OilStation oilStation : importer.getOilStationList()) {
             pipEndTimeMap.put(oilStation.getPosition(),new HashMap<>());
         }
@@ -111,7 +111,7 @@ public class Solution {
             pipEndTimeMap.get(seat.getStationPosition()).put(seat.getOilPipId(),0.0);
         }
 
-        //链表初始化
+        //operation链表初始化，找前后关系，如果保障计划有变要改
         Chromosome<AnyGene<AlleleF>> orderChromosome = genotype.getChromosome(numOfMatainance);
         for (int i = 0; i < importer.getNumOfPlane(); i++) {
             Order order = (Order) orderChromosome.getGene(i).getAllele();
@@ -138,6 +138,7 @@ public class Solution {
         }
     }
 
+    //选择时间最小的开始执行
     private long chooseExcute(){
         long witch = -1;
         double start = -1;
@@ -157,114 +158,7 @@ public class Solution {
         return witch;
     }
 
-    public double calculateMakespan(Genotype<AnyGene<AlleleF>> genotype, Importer importer){
-    operationListInit(genotype,importer);
-
-    makespan = 0;
-
-    totalDist = 0;
-
-    uselessOccupy = 0;
-
-    List<List<Double>> distTable = Setting.DIST_TABLE;
-
-    long previous;
-
-    double startTime;
-
-    long witch = chooseExcute();
-
-    while (witch != -1){
-        //按照时间顺序取出operation
-        Operation operation = excuteMap.get(witch);
-
-        double lastOperationTime = operation.getStart();
-
-        //设置第一个的previous为自己
-        if (operation.getPreviousOperation() == null){
-            previous = operation.getSeatId();
-        }else {
-            lastOperationTime = operation.getPreviousOperation().getEnd();
-            previous = operation.getPreviousOperation().getSeatId();
-        }
-
-        //设置拖行时间
-        operation.setPreviousSeatId(previous);
-        operation.setDistTime(distTable.get((int)previous).get((int)operation.getSeatId()));
-
-
-        //设置开始时间，根据前一个operation的时间、站位结束时间、管道占用结束时间来确定
-//        if (lastOperationTime-operation.getDistTime())
-        startTime = Math.max(lastOperationTime+operation.getDistTime(), seatEndTimeMap.get(operation.getSeatId()));
-        if (operation.getOperationType() == 0)
-            startTime = Math.max(startTime, pipEndTimeMap.get(operation.getStationPosition()).get(operation.getPipId()));
-
-        //设置拖行时间，如果和前一个operation之间不足则延长时间
-//        if (startTime-lastOperationTime < operation.getDistTime())
-//            startTime += operation.getDistTime();
-        operation.setStart(startTime);
-
-        //设置前一个等待，并更新站位时间
-        if(startTime - operation.getDistTime() - lastOperationTime != 0) {
-            if(operation.getPreviousOperation()!=null){
-                Operation previousOperation = operation.getPreviousOperation();
-                double endRefresh = startTime - operation.getDistTime();
-                previousOperation.setWaitTime(endRefresh-lastOperationTime);
-                previousOperation.setEnd(endRefresh);
-//                //时间碰撞检测
-//                if (endRefresh <= seatEndTimeMap.get(previousOperation.getSeatId()))
-//                    makespan += 5000.0;
-                seatEndTimeMap.put(previousOperation.getSeatId(),endRefresh);
-            }
-        }
-
-        //设置结束时间，时长duration
-        double newEndTime = startTime + operation.getDuration();
-        operation.setEnd(newEndTime);
-
-        //计算中间的空白时间
-        double tempTime = operation.getStart() - operation.getDistTime() - lastOperationTime;
-        if ( tempTime > 0)
-            uselessOccupy += tempTime;
-
-        //更新
-
-        if (operation.getOperationType()==0)
-            pipEndTimeMap.get(operation.getStationPosition()).replace(operation.getPipId(),newEndTime);
-        totalDist += operation.getDistTime();
-        //设置最后站位已经占用
-        if (operation.getNextOperation()==null){
-            seatEndTimeMap.replace(operation.getSeatId(),5000.0);
-        }else {
-//            if (seatEndTimeMap.get(operation.getSeatId())<newEndTime)
-                seatEndTimeMap.replace(operation.getSeatId(), newEndTime);
-//            else
-//                makespan+=5000;
-        }
-        makespan = Math.max(makespan,newEndTime);
-
-        //替换下一个执行的operation
-        if (operation.getNextOperation()!=null) {
-            operation.getNextOperation().setStart(newEndTime);
-            excuteMap.replace(operation.getPlaneId(), operation.getNextOperation());
-        }
-        else
-            excuteMap.remove(operation.getPlaneId());
-
-        //更新选择常数
-        witch = chooseExcute();
-        seatOperationMap.get(operation.getSeatId()).add(operation);
-    }
-
-    if (isTimeConflict(importer))
-        makespan += 5000;
-    //按照站位再重新梳理一遍
-
-//        operationList.stream().filter(operation -> operation.getOperationType() == 0).forEach(operation -> System.out.println(operation));
-//        System.out.println(operationList);
-        return makespan;
-    }
-
+    //筛选时间冲突的解
     private boolean isTimeConflict(Importer importer){
         for (Seat seat : importer.getSeatList()){
             long seatId = seat.getSeatId();
@@ -281,4 +175,96 @@ public class Solution {
         return false;
     }
 
+    //适应度计算
+    public double calculateMakespan(Genotype<AnyGene<AlleleF>> genotype, Importer importer){
+        //初始化
+        operationListInit(genotype,importer);
+
+        makespan = 0;
+        totalDist = 0;
+        uselessOccupy = 0;
+
+        List<List<Double>> distTable = Setting.DIST_TABLE;
+
+        long previous;
+        double startTime;
+        long which = chooseExcute();
+
+        while (which != -1){
+            //按照时间顺序取出operation
+            Operation operation = excuteMap.get(which);
+
+            double lastOperationTime = operation.getStart();
+
+            //设置第一个的previous为自己
+            if (operation.getPreviousOperation() == null){
+                previous = operation.getSeatId();
+            }else {
+                lastOperationTime = operation.getPreviousOperation().getEnd();
+                previous = operation.getPreviousOperation().getSeatId();
+            }
+
+            //设置拖行时间
+            operation.setPreviousSeatId(previous);
+            operation.setDistTime(distTable.get((int)previous).get((int)operation.getSeatId()));
+
+            //设置开始时间，根据前一个operation的时间、站位结束时间、管道占用结束时间来确定
+            startTime = Math.max(lastOperationTime+operation.getDistTime(), seatEndTimeMap.get(operation.getSeatId()));
+            if (operation.getOperationType() == 0)
+                startTime = Math.max(startTime, pipEndTimeMap.get(operation.getStationPosition()).get(operation.getPipId()));
+
+            operation.setStart(startTime);
+
+            //设置前一个等待，并更新站位时间
+            if(startTime - operation.getDistTime() - lastOperationTime != 0) {
+                if(operation.getPreviousOperation()!=null){
+                    Operation previousOperation = operation.getPreviousOperation();
+                    double endRefresh = startTime - operation.getDistTime();
+                    previousOperation.setWaitTime(endRefresh-lastOperationTime);
+                    previousOperation.setEnd(endRefresh);
+                    seatEndTimeMap.put(previousOperation.getSeatId(),endRefresh);
+                }
+            }
+
+            //设置结束时间，时长duration
+            double newEndTime = startTime + operation.getDuration();
+            operation.setEnd(newEndTime);
+
+            //计算中间的空白时间
+            double tempTime = operation.getStart() - operation.getDistTime() - lastOperationTime;
+            if ( tempTime > 0)
+                uselessOccupy += tempTime;
+
+            //更新
+            if (operation.getOperationType()==0)
+                pipEndTimeMap.get(operation.getStationPosition()).replace(operation.getPipId(),newEndTime);
+            totalDist += operation.getDistTime();
+            //设置最后站位已经占用
+            if (operation.getNextOperation()==null){
+                seatEndTimeMap.replace(operation.getSeatId(),5000.0);
+            }else {
+                seatEndTimeMap.replace(operation.getSeatId(), newEndTime);
+            }
+            makespan = Math.max(makespan,newEndTime);
+
+            //替换下一个执行的operation
+            if (operation.getNextOperation()!=null) {
+                operation.getNextOperation().setStart(newEndTime);
+                excuteMap.replace(operation.getPlaneId(), operation.getNextOperation());
+            }
+            else
+                excuteMap.remove(operation.getPlaneId());
+
+            //更新选择常数
+            which = chooseExcute();
+            seatOperationMap.get(operation.getSeatId()).add(operation);
+        }
+
+        //最后加上时间约束，不满足约束直接去除解
+        if (isTimeConflict(importer))
+            makespan += 5000;
+
+//            System.out.println(operationList);
+        return makespan;
+    }
 }
