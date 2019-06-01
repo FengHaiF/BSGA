@@ -86,7 +86,7 @@ public class Main {
                 .optimize(Optimize.MINIMUM)
                 .build();
 
-//求帕累托集
+        //求帕累托集
         ISeq<Phenotype<AnyGene<AlleleF>, Vec<Float[]>>> collect = engine
                 .stream()
                 .limit(Setting.LIMIT_GENERATION)
@@ -197,6 +197,7 @@ public class Main {
             }
         }
 
+        //做一层过滤，有点用
         if (fitnessS(gt,importer) > 5000.0)
             return false;
 
