@@ -6,7 +6,7 @@
     <oilPipNum>1</oilPipNum>
     <position>S1</position>
     <stationEndTime>0</stationEndTime>
-    <speed>1</speed>
+    <speed>2</speed>
   </CDHS.domain.OilStation>
   <CDHS.domain.OilStation>
     <stationId>1</stationId>

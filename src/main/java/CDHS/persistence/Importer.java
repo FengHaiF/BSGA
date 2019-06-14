@@ -19,6 +19,9 @@ public class Importer {
     private List<Seat> dySeatList;
     private List<OilStation> oilStationList;
     private List<Order> orderList;
+    private List<Seat> bfList;
+    private List<Seat> zbList;
+    private List<Seat> tsqList;
 
     private Map<Long,PlaneJZJ> planeJZJMap;
     private Map<Long,Seat> oilSeatMap;
@@ -48,6 +51,9 @@ public class Importer {
         dySeatList = new ArrayList<>();
         oilStationList = new ArrayList<>();
         orderList = new ArrayList<>();
+        bfList = new ArrayList<>();
+        zbList = new ArrayList<>();
+        tsqList = new ArrayList<>();
 
         planeJZJMap = new HashMap<>();
         oilSeatMap = new HashMap<>();
@@ -82,6 +88,17 @@ public class Importer {
             }
             if (seat.isDyFlag()){
                 dySeatList.add(seat);
+            }
+            switch (seat.getSeatType()){
+                case 0:
+                    bfList.add(seat);
+                    break;
+                case 1:
+                    tsqList.add(seat);
+                    break;
+                case 2:
+                    zbList.add(seat);
+                    break;
             }
         }
 
@@ -122,6 +139,30 @@ public class Importer {
 
     public int getNumOfPlane(){
         return planeList.size();
+    }
+
+    public List<Seat> getBfList() {
+        return bfList;
+    }
+
+    public void setBfList(List<Seat> bfList) {
+        this.bfList = bfList;
+    }
+
+    public List<Seat> getZbList() {
+        return zbList;
+    }
+
+    public void setZbList(List<Seat> zbList) {
+        this.zbList = zbList;
+    }
+
+    public List<Seat> getTsqList() {
+        return tsqList;
+    }
+
+    public void setTsqList(List<Seat> tsqList) {
+        this.tsqList = tsqList;
     }
 
     public List<PlaneJZJ> getPlaneList() {
@@ -203,6 +244,7 @@ public class Importer {
     public static void setOrderPath(String orderPath) {
         Importer.orderPath = orderPath;
     }
+
 
     public static void main(String[] args) {
         new Importer().init();

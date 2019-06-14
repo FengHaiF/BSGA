@@ -17,6 +17,7 @@ public class Setting {
     public static int LIMIT_GENERATION;
     public static int NUM_OF_MATAINANCE;
     public static int POPULATION_SIZE;
+    public static double QYC_SPEED = 80;
 
 
     public static List<List<Double>> DIST_TABLE = new ArrayList<>();
@@ -28,7 +29,8 @@ public class Setting {
             {1,0,2}
     };
 
-    public static long[] TAKEOFF_TABLE = {0,1,2,3,4,5,6,7,8,9,10,11,12,13};
+    public static long[] TAKEOFF_TABLE = {14,15,0,1,2,3,4,5,6,7,8,9,10,11};
+    public static long[] INITIAL_TABLE = {14,3,2,15,6,5,7,1,4,7,8,9,10,11};
 
     static {
         set(SetMode.SET_MODE_01);

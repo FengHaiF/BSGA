@@ -3,13 +3,14 @@
 <list>
   <CDHS.domain.PlaneJZJ>
     <planeId>0</planeId>
-    <task>ZZ</task>
-    <planeType>ZDJ</planeType>
-    <planeSize>A</planeSize>
+    <!--<task>ZZ</task>-->
+    <!--<planeType>ZDJ</planeType>-->
+    <!--<planeSize>A</planeSize>-->
     <oilMax>20</oilMax>
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>1</planeId>
@@ -20,6 +21,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>2</planeId>
@@ -30,6 +32,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>3</planeId>
@@ -40,6 +43,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>4</planeId>
@@ -50,6 +54,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>5</planeId>
@@ -60,6 +65,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>6</planeId>
@@ -70,6 +76,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>7</planeId>
@@ -80,6 +87,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>8</planeId>
@@ -90,6 +98,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>9</planeId>
@@ -100,6 +109,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>10</planeId>
@@ -110,6 +120,7 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
   <CDHS.domain.PlaneJZJ>
     <planeId>11</planeId>
@@ -120,5 +131,6 @@
     <oilQuantity>0</oilQuantity>
     <ammunitionMax>6</ammunitionMax>
     <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
 </list>

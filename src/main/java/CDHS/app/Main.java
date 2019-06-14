@@ -20,7 +20,8 @@ import java.util.function.Predicate;
 
 @SuppressWarnings("all")
 public class Main {
-    static List<AnyChromosome<AlleleF>> chromosomes = new ArrayList<>();
+    static List<AnyChromosome<AlleleF>> chromosomesBZ = new ArrayList<>();
+    static List<AnyChromosome<AlleleF>> chromosomesBF= new ArrayList<>();
     static Importer importer = new Importer();
 
     public static void main(String[] args) {
@@ -31,18 +32,35 @@ public class Main {
         long start= System.currentTimeMillis();
 
         initialChromosomes();
-        Genotype<AnyGene<AlleleF>> genotype = Genotype.of(chromosomes);
-        System.out.println(genotype);
-
+        Genotype<AnyGene<AlleleF>> genotypeBZ = Genotype.of(chromosomesBZ);
+        Genotype<AnyGene<AlleleF>> genotypeBF = Genotype.of(chromosomesBF);
+        System.out.println(genotypeBZ);
+        System.out.println(genotypeBF);
         /**
-         * solver
+         * solver BF
          */
-//        SingleObjSolver(genotype);
-        MultiObjSolver(genotype);
+        Engine<AnyGene<AlleleF>, Float> engine = Engine
+                .builder(gt -> Main.fitnessSingleBF(gt,importer),genotypeBF)
+//                .genotypeValidator(validator)
+                .populationSize(Setting.POPULATION_SIZE)
+                .optimize(Optimize.MINIMUM)
+                .build();
+        Phenotype<AnyGene<AlleleF>, Float> result = engine
+                .stream()
+                .limit(Setting.LIMIT_GENERATION)
+                .peek(Main::printS)
+                .collect(EvolutionResult.toBestPhenotype());
+//        new ShowFrame().SOGA_ShowFrame(result,importer);
+        /**
+         * solver BZ
+         */
+//        SingleObjSolverBZ(genotype);
+        MultiObjSolverBZ(genotypeBZ);
 
         System.out.println(System.currentTimeMillis()-start);
     }
 
+    //初始化
     public static void initialChromosomes(){
         AnyChromosome<AlleleF> chromosome1 =
                 AnyChromosome.of(
@@ -51,7 +69,7 @@ public class Main {
                 );
 
         System.out.println(chromosome1);
-        chromosomes.add(chromosome1);
+        chromosomesBZ.add(chromosome1);
 
         AnyChromosome<AlleleF> chromosome2 =
                 AnyChromosome.of(
@@ -60,7 +78,7 @@ public class Main {
                 );
 
         System.out.println(chromosome2);
-        chromosomes.add(chromosome2);
+        chromosomesBZ.add(chromosome2);
 
         AnyChromosome<AlleleF> chromosome3 =
                 AnyChromosome.of(
@@ -69,14 +87,34 @@ public class Main {
                 );
 
         System.out.println(chromosome3);
-        chromosomes.add(chromosome3);
+        chromosomesBZ.add(chromosome3);
+
+        AnyChromosome<AlleleF> chromosome4 =
+                AnyChromosome.of(
+                        ()-> GeneF.generateAllele(importer.getBfList()),
+                        importer.getPlaneList().size()-importer.getTsqList().size()
+                );
+
+        System.out.println(chromosome4);
+        chromosomesBF.add(chromosome4);
+
+        AnyChromosome<AlleleF> chromosome5 =
+                AnyChromosome.of(
+                        ()-> GeneF.generateAllele(importer.getTsqList()),
+                        importer.getPlaneList().size()-importer.getTsqList().size()
+                );
+
+        System.out.println(chromosome5);
+        chromosomesBF.add(chromosome5);
     }
 
-    public static void MultiObjSolver(Genotype<AnyGene<AlleleF>> genotype){
+    //保障计划构建
+    public static void MultiObjSolverBZ(Genotype<AnyGene<AlleleF>> genotype){
         Engine<AnyGene<AlleleF>, Vec<Float[]>> engine = Engine
-                .builder(gt -> Vec.of(fitnessAndDist(gt,importer)),genotype)
+                .builder(gt -> Vec.of(multiObjectBZ(gt,importer)),genotype)
                 .genotypeValidator(validator)
                 .populationSize(Setting.POPULATION_SIZE)
+                .alterers(new MultiPointCrossover<>(0.5,2),new Mutator<>(0.15))
                 .offspringSelector(new TournamentSelector<>(4))
                 .survivorsSelector(NSGA2Selector.ofVec())
 //                .survivorsSelector(UFTournamentSelector.ofVec())
@@ -101,9 +139,10 @@ public class Main {
         new ShowFrame().MOGA_ShowFrame(bestPhenotype,importer);
     }
 
-    public static void SingleObjSolver(Genotype<AnyGene<AlleleF>> genotype){
+    public static void SingleObjSolverBZ(Genotype<AnyGene<AlleleF>> genotype){
         Engine<AnyGene<AlleleF>, Float> engine = Engine
-                .builder(gt -> Main.fitnessS(gt,importer),genotype)
+                .builder(gt -> Main.fitnessSingleBZ(gt,importer),genotype)
+                .genotypeValidator(validator)
                 .populationSize(Setting.POPULATION_SIZE)
                 .optimize(Optimize.MINIMUM)
                 .build();
@@ -133,8 +172,19 @@ public class Main {
             }
         }
 
+        //过滤不知道有没有用
+//        for (int i = 0; i < importer.getNumOfPlane(); i++) {
+//            Order order = (Order) orderChromosome.getGene(i).getAllele();
+//            int[] orderArray = Setting.ORDER_TABLE[(int) order.getOrderId()];
+//            Chromosome<AnyGene<AlleleF>> chromosome = gt.getChromosome(orderArray[0]);
+//            Seat seat = (Seat) chromosome.getGene(i).getAllele();
+//            if(seat.getSeatId()!=Setting.INITIAL_TABLE[i]){
+//                return false;
+//            }
+//        }
+
         //做一层过滤，有点用
-        if (fitnessS(gt,importer) > 5000.0)
+        if (fitnessSingleBZ(gt,importer) > 5000.0)
             return false;
 
         return true;
@@ -163,6 +213,38 @@ public class Main {
         return which;
     }
 
+    public static float fitnessSingleBZ(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
+        Solution  solution= new Solution();
+
+        double makespan = solution.calculateMakespan(genotype, importer);
+
+//        System.out.println(solution.getOperationList());
+        return (float)makespan;
+    }
+
+    public static Float[] multiObjectBZ(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
+        Solution  solution= new Solution();
+
+        Float makespan = (float)solution.calculateMakespan(genotype, importer);
+        Float uselessOccupy = (float)solution.getUselessOccupy();
+        Float totalDist = (float)solution.getTotalDist();
+//        makespan+=uselessOccupy;
+        Float[] floats ={makespan,totalDist};
+//        System.out.println(solution.getOperationList());
+//        System.out.println(uselessOccupy);
+        return floats;
+    }
+
+    //布放计划的构建
+    public static float fitnessSingleBF(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
+        SolutionBF  solutionBF = new SolutionBF();
+//
+        double makespan = solutionBF.calculateMakespan(genotype, importer);
+
+//        System.out.println(solution.getOperationList());
+        return (float)makespan;
+    }
+    //print
     private static void printS(final EvolutionResult<AnyGene<AlleleF>, Float> result) {
         for (Phenotype<AnyGene<AlleleF>, Float> phenotype:
                 result.getPopulation()) {
@@ -179,28 +261,6 @@ public class Main {
 //        Vec<Float[]> fitness = result.getPopulation().get(0).getFitness();
         System.out.println(result.getGeneration()+" best:"+result.getBestPhenotype());
         System.out.println(result.getGeneration()+"fitness"+result.getBestFitness());
-    }
-
-    public static float fitnessS(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
-        Solution  solution= new Solution();
-
-        double makespan = solution.calculateMakespan(genotype, importer);
-
-//        System.out.println(solution.getOperationList());
-        return (float)makespan;
-    }
-
-    public static Float[] fitnessAndDist(Genotype<AnyGene<AlleleF>> genotype, Importer importer) {
-        Solution  solution= new Solution();
-
-        Float makespan = (float)solution.calculateMakespan(genotype, importer);
-        Float uselessOccupy = (float)solution.getUselessOccupy();
-        Float totalDist = (float)solution.getTotalDist();
-//        makespan+=uselessOccupy;
-        Float[] floats ={makespan,totalDist,uselessOccupy};
-//        System.out.println(solution.getOperationList());
-//        System.out.println(uselessOccupy);
-        return floats;
     }
 
 }

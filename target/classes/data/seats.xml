@@ -4,13 +4,13 @@
   <CDHS.domain.Seat>
     <seatType>0</seatType>
     <seatId>0</seatId>
-    <seatSize>A</seatSize>
+    <!--<seatSize>A</seatSize>-->
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
       <string>S1</string>
     </stationList>
-    <stationPosition>XX</stationPosition>
+    <!--<stationPosition>XX</stationPosition>-->
   </CDHS.domain.Seat>
   <CDHS.domain.Seat>
     <seatType>0</seatType>
@@ -42,7 +42,6 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S1</string>
       <string>S2</string>
     </stationList>
     <stationPosition>XX</stationPosition>
@@ -54,9 +53,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S1</string>
       <string>S2</string>
-      <string>S3</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -67,9 +64,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S1</string>
       <string>S2</string>
-      <string>S3</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -80,6 +75,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
+      <string>S2</string>
       <string>S3</string>
     </stationList>
     <stationPosition>XX</stationPosition>
@@ -115,7 +111,6 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S3</string>
       <string>S4</string>
     </stationList>
     <stationPosition>XX</stationPosition>
@@ -167,47 +162,45 @@
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
   <CDHS.domain.Seat>
-    <seatType>0</seatType>
+    <seatType>1</seatType>
     <seatId>14</seatId>
     <seatSize>A</seatSize>
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
-    <stationList></stationList>
+    <stationList>
+      <string>S1</string>
+    </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
   <CDHS.domain.Seat>
-    <seatType>0</seatType>
+    <seatType>1</seatType>
     <seatId>15</seatId>
     <seatSize>A</seatSize>
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
+    <stationList>
+      <string>S5</string>
+    </stationList>
+    <stationPosition>XX</stationPosition>
+  </CDHS.domain.Seat>
+  <CDHS.domain.Seat>
+    <seatType>2</seatType>
+    <seatId>16</seatId>
+    <seatSize>A</seatSize>
+    <oilFlag>false</oilFlag>
+    <dyFlag>false</dyFlag>
     <stationList></stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
-  <!--<CDHS.domain.Seat>-->
-    <!--<seatType>0</seatType>-->
-    <!--<seatId>16</seatId>-->
-    <!--<seatSize>A</seatSize>-->
-    <!--<oilFlag>true</oilFlag>-->
-    <!--<dyFlag>true</dyFlag>-->
-    <!--<stationList>-->
-      <!--<string>S5</string>-->
-      <!--<string>S6</string>-->
-    <!--</stationList>-->
-    <!--<stationPosition>XX</stationPosition>-->
-  <!--</CDHS.domain.Seat>-->
-  <!--<CDHS.domain.Seat>-->
-    <!--<seatType>0</seatType>-->
-    <!--<seatId>17</seatId>-->
-    <!--<seatSize>A</seatSize>-->
-    <!--<oilFlag>true</oilFlag>-->
-    <!--<dyFlag>true</dyFlag>-->
-    <!--<stationList>-->
-      <!--<string>S5</string>-->
-      <!--<string>S6</string>-->
-    <!--</stationList>-->
-    <!--<stationPosition>XX</stationPosition>-->
-  <!--</CDHS.domain.Seat>-->
+  <CDHS.domain.Seat>
+    <seatType>2</seatType>
+    <seatId>17</seatId>
+    <seatSize>A</seatSize>
+    <oilFlag>false</oilFlag>
+    <dyFlag>false</dyFlag>
+    <stationList></stationList>
+    <stationPosition>XX</stationPosition>
+  </CDHS.domain.Seat>
   <!--<CDHS.domain.Seat>-->
     <!--<seatType>0</seatType>-->
     <!--<seatId>18</seatId>-->

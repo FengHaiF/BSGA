@@ -198,7 +198,8 @@ public class Solution {
 
             //设置第一个的previous为自己
             if (operation.getPreviousOperation() == null){
-                previous = operation.getSeatId();
+//                previous = operation.getSeatId();
+                previous = Setting.INITIAL_TABLE[(int)operation.getPlaneId()];
             }else {
                 lastOperationTime = operation.getPreviousOperation().getEnd();
                 previous = operation.getPreviousOperation().getSeatId();
@@ -206,7 +207,7 @@ public class Solution {
 
             //设置拖行时间
             operation.setPreviousSeatId(previous);
-            operation.setDistTime(distTable.get((int)previous).get((int)operation.getSeatId()));
+            operation.setDistTime((distTable.get((int)previous).get((int)operation.getSeatId())/Setting.QYC_SPEED)+3);
 
             //设置开始时间，根据前一个operation的时间、站位结束时间、管道占用结束时间来确定
             startTime = Math.max(lastOperationTime+operation.getDistTime(), seatEndTimeMap.get(operation.getSeatId()));

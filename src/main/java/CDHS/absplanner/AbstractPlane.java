@@ -9,11 +9,12 @@ public abstract class AbstractPlane {
     protected double oilQuantity;
     protected int ammunitionMax;
     protected int ammunitionQuantity;
+    protected long initialPosition;
 
     public AbstractPlane() {
     }
 
-    public AbstractPlane(long planeId, String task, String planeType, String planeSize, double oilMax, double oilQuantity, int ammunitionMax, int ammunitionQuantity) {
+    public AbstractPlane(long planeId, String task, String planeType, String planeSize, double oilMax, double oilQuantity, int ammunitionMax, int ammunitionQuantity, long initialPosition) {
         this.planeId = planeId;
         this.task = task;
         this.planeType = planeType;
@@ -22,6 +23,7 @@ public abstract class AbstractPlane {
         this.oilQuantity = oilQuantity;
         this.ammunitionMax = ammunitionMax;
         this.ammunitionQuantity = ammunitionQuantity;
+        this.initialPosition = initialPosition;
     }
 
     public long getPlaneId() {
@@ -86,6 +88,14 @@ public abstract class AbstractPlane {
 
     public void setAmmunitionQuantity(int ammunitionQuantity) {
         this.ammunitionQuantity = ammunitionQuantity;
+    }
+
+    public long getInitialPosition() {
+        return initialPosition;
+    }
+
+    public void setInitialPosition(long initialPosition) {
+        this.initialPosition = initialPosition;
     }
 
     @Override

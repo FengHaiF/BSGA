@@ -9,6 +9,7 @@ public class PlaneJZJ extends AbstractPlane {
     private OilStation oilStation;
     private Order order;
 
+
     public Order getOrder() {
         return order;
     }
@@ -44,8 +45,8 @@ public class PlaneJZJ extends AbstractPlane {
     public PlaneJZJ() {
     }
 
-    public PlaneJZJ(long planeId, String task, String planeType, String planeSize, double oilMax, double oilQuantity, int ammunitionMax, int ammunitionQuantity, Seat oilSeat, Seat dySeat, OilStation oilStation) {
-        super(planeId, task, planeType, planeSize, oilMax, oilQuantity, ammunitionMax, ammunitionQuantity);
+    public PlaneJZJ(long planeId, String task, String planeType, String planeSize, double oilMax, double oilQuantity, int ammunitionMax, int ammunitionQuantity, Seat oilSeat, Seat dySeat, OilStation oilStation,long initialPosition) {
+        super(planeId, task, planeType, planeSize, oilMax, oilQuantity, ammunitionMax, ammunitionQuantity,initialPosition);
         this.oilSeat = oilSeat;
         this.dySeat = dySeat;
         this.oilStation = oilStation;
