@@ -10,6 +10,7 @@ public class Operation {
     private double start;
     private double end;    //开始结束时间
     private double waitTime;
+    private double coldTime;
     private int operationType;
     private long previousSeatId;
     private double distTime;
@@ -28,6 +29,7 @@ public class Operation {
         this.end = end;
         this.operationType = operationType;
         this.waitTime = 0;
+        this.coldTime = 0;
     }
 
     public String getStationPosition(){
@@ -136,6 +138,14 @@ public class Operation {
 
     public void setWaitTime(double waitTime) {
         this.waitTime = waitTime;
+    }
+
+    public double getColdTime() {
+        return coldTime;
+    }
+
+    public void setColdTime(double coldTime) {
+        this.coldTime = coldTime;
     }
 
     @Override

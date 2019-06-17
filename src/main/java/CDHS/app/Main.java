@@ -2,10 +2,15 @@ package CDHS.app;
 
 import CDHS.GA.AlleleF;
 import CDHS.GA.GeneF;
+import CDHS.domain.Operation;
 import CDHS.domain.Order;
 import CDHS.domain.Seat;
 import CDHS.persistence.Importer;
 import CDHS.showframe.ShowFrame;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import io.jenetics.*;
 import io.jenetics.engine.*;
 import io.jenetics.ext.moea.MOEA;
@@ -14,6 +19,11 @@ import io.jenetics.ext.moea.Vec;
 import io.jenetics.util.ISeq;
 import io.jenetics.util.IntRange;
 
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -39,22 +49,21 @@ public class Main {
         /**
          * solver BF
          */
-        Engine<AnyGene<AlleleF>, Float> engine = Engine
-                .builder(gt -> Main.fitnessSingleBF(gt,importer),genotypeBF)
-//                .genotypeValidator(validator)
-                .populationSize(Setting.POPULATION_SIZE)
-                .optimize(Optimize.MINIMUM)
-                .build();
-        Phenotype<AnyGene<AlleleF>, Float> result = engine
-                .stream()
-                .limit(Setting.LIMIT_GENERATION)
-                .peek(Main::printS)
-                .collect(EvolutionResult.toBestPhenotype());
+//        Engine<AnyGene<AlleleF>, Float> engine = Engine
+//                .builder(gt -> Main.fitnessSingleBF(gt,importer),genotypeBF)
+//                .populationSize(Setting.POPULATION_SIZE)
+//                .optimize(Optimize.MINIMUM)
+//                .build();
+//        Phenotype<AnyGene<AlleleF>, Float> result = engine
+//                .stream()
+//                .limit(Setting.LIMIT_GENERATION)
+//                .peek(Main::printS)
+//                .collect(EvolutionResult.toBestPhenotype());
 //        new ShowFrame().SOGA_ShowFrame(result,importer);
         /**
          * solver BZ
          */
-//        SingleObjSolverBZ(genotype);
+//        SingleObjSolverBZ(genotypeBZ);
         MultiObjSolverBZ(genotypeBZ);
 
         System.out.println(System.currentTimeMillis()-start);
@@ -135,6 +144,8 @@ public class Main {
         for (Phenotype<AnyGene<AlleleF>, Vec<Float[]>> anyGeneVecPhenotype : collect) {
             System.out.println(anyGeneVecPhenotype);
         }
+
+        jsonOutput(bestPhenotype);
 
         new ShowFrame().MOGA_ShowFrame(bestPhenotype,importer);
     }
@@ -263,4 +274,37 @@ public class Main {
         System.out.println(result.getGeneration()+"fitness"+result.getBestFitness());
     }
 
+    public static void jsonOutput(Phenotype<AnyGene<AlleleF>, Vec<Float[]>> bestPhenotype) {
+
+        Solution solution = new Solution();
+        solution.calculateMakespan(bestPhenotype.getGenotype(),importer);
+        JSONObject jsonObject;
+        JSONArray solutionArray = new JSONArray();
+        System.out.println(solution.getOperationList());
+        for (Operation operation : solution.getOperationList()) {
+            jsonObject = new JSONObject();
+            List<JSONObject> record= new ArrayList<>();
+            jsonObject.put("operationId",operation.getOperationId());
+            jsonObject.put("planeId",operation.getPlaneId());
+            jsonObject.put("operationType",operation.getOperationType());
+            jsonObject.put("seatId",operation.getSeatId());
+            jsonObject.put("duration",operation.getDuration());
+            jsonObject.put("startTime",operation.getStart());
+            jsonObject.put("endTime",operation.getEnd());
+            jsonObject.put("waitTime",operation.getWaitTime());
+            jsonObject.put("distTime",operation.getDistTime());
+            record.add(jsonObject);
+            solutionArray.addAll(record);
+        }
+        try {
+            FileWriter fileWriter = new FileWriter(new File( Main.class.getClassLoader().getResource("data").getPath(),"solved.json"));
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.write(JSON.toJSONString(solutionArray, SerializerFeature.DisableCircularReferenceDetect));
+            printWriter.println();
+            fileWriter.close();
+            printWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

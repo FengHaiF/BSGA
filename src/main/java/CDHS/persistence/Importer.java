@@ -1,14 +1,18 @@
 package CDHS.persistence;
 
+import CDHS.app.Setting;
 import CDHS.domain.*;
 
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONReader;
 import com.fasterxml.jackson.databind.util.BeanUtil;
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -35,11 +39,14 @@ public class Importer {
     private static String stationPath;
     private static String orderPath;
 
+    private static String jsonPath;
+
     static {
         seatPath = Importer.class.getClassLoader().getResource("data/seats.xml").getPath();
         planePath = Importer.class.getClassLoader().getResource("data/planes.xml").getPath();
         stationPath = Importer.class.getClassLoader().getResource("data/stations.xml").getPath();
         orderPath = Importer.class.getClassLoader().getResource("data/orders.xml").getPath();
+        jsonPath = Importer.class.getClassLoader().getResource("data/initmess.json").getPath();
     }
 
     public Importer() {
@@ -61,10 +68,23 @@ public class Importer {
         oilStationMap = new HashMap<>();
         orderMap = new HashMap<>();
 
-        planeList = new XmlIO<PlaneJZJ>(planePath).xml2Object();
+        File file = new File(jsonPath);
+        try {
+            String s = new JSONReader(new FileReader(file)).readString();
+            JSONObject jsonObject = JSONObject.parseObject(s);
+            JSONArray jsonArrayPlane = jsonObject.getJSONArray("plane");
+            planeList = JSONArray.parseArray(jsonArrayPlane.toString(),PlaneJZJ.class);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+//        planeList = new XmlIO<PlaneJZJ>(planePath).xml2Object();
         seatList = new XmlIO<Seat>(seatPath).xml2Object();
         oilStationList = new XmlIO<OilStation>(stationPath).xml2Object();
         orderList = new XmlIO<Order>(orderPath).xml2Object();
+
+
 
         for (OilStation oilStation : oilStationList)
             oilStationMap.put(oilStation.getPosition(),oilStation);
@@ -110,6 +130,11 @@ public class Importer {
             dySeatMap.put(seat.getSeatId(),seat);
         for (Order order : orderList)
             orderMap.put(order.getOrderId(),order);
+
+        for (int i = 0; i < planeList.size(); i++) {
+            Setting.INITIAL_TABLE[i] = planeList.get(i).getInitialPosition();
+        }
+
 
         System.out.println(oilSeatList);
         System.out.println(dySeatList);

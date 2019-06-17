@@ -1,0 +1,209 @@
+{
+    "ammunition": {
+        "dySpeed": 1
+    },
+    "oil_station": [
+        {
+            "serve_parking": [
+                0,
+                1,
+                14,
+                15,
+                2
+            ],
+            "speed": 2,
+            "stationId": 2
+        },
+        {
+            "serve_parking": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "speed": 2,
+            "stationId": 25
+        },
+        {
+            "serve_parking": [
+                6,
+                7,
+                8
+            ],
+            "speed": 2,
+            "stationId": 27
+        },
+        {
+            "serve_parking": [
+                1,
+                11,
+                12,
+                7,
+                8,
+                0
+            ],
+            "speed": 2,
+            "stationId": 29
+        },
+        {
+            "serve_parking": [
+                11,
+                12,
+                13
+            ],
+            "speed": 2,
+            "stationId": 31
+        }
+    ],
+    "plane": [
+        {
+            "ammunitionMax": 5,
+            "ammunitionQuantity": 1,
+            "initialPosition": 0,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 0,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 5,
+            "ammunitionQuantity": 0,
+            "initialPosition": 1,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 1,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 5,
+            "ammunitionQuantity": 0,
+            "initialPosition": 1,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 2,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 5,
+            "ammunitionQuantity": 3,
+            "initialPosition": 11,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 3,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 12,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 4,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 13,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 5,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 2,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 6,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 3,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 7,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 4,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 8,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 5,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 9,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 6,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 10,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 7,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 11,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 0,
+            "initialPosition": 8,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 12,
+            "planeSpeed": 5
+        },
+        {
+            "ammunitionMax": 6,
+            "ammunitionQuantity": 3,
+            "initialPosition": 0,
+            "oilMax": 100,
+            "oilQuantity": 0,
+            "planeId": 13,
+            "planeSpeed": 5
+        }
+    ],
+    "tractor": [
+        {
+            "qycspeed": 10,
+            "tractor_id": 4
+        },
+        {
+            "qycspeed": 10,
+            "tractor_id": 35
+        },
+        {
+            "qycspeed": 10,
+            "tractor_id": 37
+        },
+        {
+            "qycspeed": 10,
+            "tractor_id": 39
+        },
+        {
+            "qycspeed": 10,
+            "tractor_id": 41
+        }
+    ]
+}

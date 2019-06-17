@@ -133,4 +133,26 @@
     <ammunitionQuantity>0</ammunitionQuantity>
     <initialPosition>1</initialPosition>
   </CDHS.domain.PlaneJZJ>
+  <CDHS.domain.PlaneJZJ>
+    <planeId>12</planeId>
+    <task>ZZ</task>
+    <planeType>ZDJ</planeType>
+    <planeSize>A</planeSize>
+    <oilMax>15</oilMax>
+    <oilQuantity>0</oilQuantity>
+    <ammunitionMax>6</ammunitionMax>
+    <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
+  </CDHS.domain.PlaneJZJ>
+  <CDHS.domain.PlaneJZJ>
+    <planeId>13</planeId>
+    <task>ZZ</task>
+    <planeType>ZDJ</planeType>
+    <planeSize>A</planeSize>
+    <oilMax>15</oilMax>
+    <oilQuantity>0</oilQuantity>
+    <ammunitionMax>6</ammunitionMax>
+    <ammunitionQuantity>0</ammunitionQuantity>
+    <initialPosition>1</initialPosition>
+  </CDHS.domain.PlaneJZJ>
 </list>

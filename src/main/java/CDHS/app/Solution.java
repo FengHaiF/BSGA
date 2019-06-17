@@ -207,7 +207,9 @@ public class Solution {
 
             //设置拖行时间
             operation.setPreviousSeatId(previous);
-            operation.setDistTime((distTable.get((int)previous).get((int)operation.getSeatId())/Setting.QYC_SPEED)+3);
+            operation.setDistTime((distTable.get((int)previous).get((int)operation.getSeatId())/Setting.QYC_SPEED));
+            if (operation.getDistTime()!=0)
+                operation.setDistTime(operation.getDistTime()+2);
 
             //设置开始时间，根据前一个operation的时间、站位结束时间、管道占用结束时间来确定
             startTime = Math.max(lastOperationTime+operation.getDistTime(), seatEndTimeMap.get(operation.getSeatId()));

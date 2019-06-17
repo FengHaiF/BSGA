@@ -17,7 +17,9 @@ public class Setting {
     public static int LIMIT_GENERATION;
     public static int NUM_OF_MATAINANCE;
     public static int POPULATION_SIZE;
-    public static double QYC_SPEED = 80;
+    public static double QYC_SPEED = 90;
+    public static double ZB_DURATION = 10;
+    public static double COLD_DURATION = 2;
 
 
     public static List<List<Double>> DIST_TABLE = new ArrayList<>();
