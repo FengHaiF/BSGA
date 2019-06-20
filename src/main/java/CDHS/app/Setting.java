@@ -10,7 +10,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Setting {
@@ -20,7 +22,6 @@ public class Setting {
     public static double QYC_SPEED = 90;
     public static double ZB_DURATION = 10;
     public static double COLD_DURATION = 2;
-
 
     public static List<List<Double>> DIST_TABLE = new ArrayList<>();
 
@@ -34,6 +35,8 @@ public class Setting {
     public static long[] TAKEOFF_TABLE = {14,15,0,1,2,3,4,5,6,7,8,9,10,11};
     public static long[] INITIAL_TABLE = {14,3,2,15,6,5,7,1,4,7,8,9,10,11};
 
+    public static Date DATE;
+
     static {
         set(SetMode.SET_MODE_01);
     }
@@ -45,6 +48,7 @@ public class Setting {
                 POPULATION_SIZE = 20;
                 LIMIT_GENERATION  = 5000;
                 NUM_OF_MATAINANCE = 2;
+                DATE = new Date();
                 break;
             case SET_MODE_02:
                 setDistTable(DIST_TABLE,DIST_PATH);
@@ -88,6 +92,13 @@ public class Setting {
         } catch (InvalidFormatException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        Date date = new Date();
+        SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        System.out.println(date.getTime());
+        System.out.println(ft.format(date));
     }
 }
 

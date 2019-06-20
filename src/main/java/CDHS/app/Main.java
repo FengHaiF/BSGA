@@ -24,6 +24,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -59,7 +60,7 @@ public class Main {
 //                .limit(Setting.LIMIT_GENERATION)
 //                .peek(Main::printS)
 //                .collect(EvolutionResult.toBestPhenotype());
-//        new ShowFrame().SOGA_ShowFrame(result,importer);
+//        new ShowFrame().BF_ShowFrame(result,importer);
         /**
          * solver BZ
          */
@@ -277,25 +278,53 @@ public class Main {
     public static void jsonOutput(Phenotype<AnyGene<AlleleF>, Vec<Float[]>> bestPhenotype) {
 
         Solution solution = new Solution();
-        solution.calculateMakespan(bestPhenotype.getGenotype(),importer);
+        double makespan = solution.calculateMakespan(bestPhenotype.getGenotype(), importer);
         JSONObject jsonObject;
         JSONArray solutionArray = new JSONArray();
         System.out.println(solution.getOperationList());
-        for (Operation operation : solution.getOperationList()) {
+
+        for (int i = 0; i < solution.getOperationPlaneMap().size(); i++) {
+            List<Operation> operations = solution.getOperationPlaneMap().get((long)i);
             jsonObject = new JSONObject();
             List<JSONObject> record= new ArrayList<>();
-            jsonObject.put("operationId",operation.getOperationId());
-            jsonObject.put("planeId",operation.getPlaneId());
-            jsonObject.put("operationType",operation.getOperationType());
-            jsonObject.put("seatId",operation.getSeatId());
-            jsonObject.put("duration",operation.getDuration());
-            jsonObject.put("startTime",operation.getStart());
-            jsonObject.put("endTime",operation.getEnd());
-            jsonObject.put("waitTime",operation.getWaitTime());
-            jsonObject.put("distTime",operation.getDistTime());
+//            jsonObject.put("planeId",String.valueOf(importer.PLANE_ID.get(i)));
+            jsonObject.put("planeId",i);
+            for (int j = 0; j < operations.size(); j++) {
+                SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+                JSONObject jsonObjectOperation = new JSONObject();
+                Operation operation = operations.get(j);
+                jsonObjectOperation.put("operationId",operation.getOperationId());
+//                jsonObjectOperation.put("planeId",String.valueOf(importer.PLANE_ID.get((int)operation.getPlaneId())));
+                jsonObjectOperation.put("operationType",operation.getOperationType());
+                jsonObjectOperation.put("seatId",String.valueOf(operation.getSeatId()));
+                jsonObjectOperation.put("duration",operation.getDuration());
+                Date date = Setting.DATE;
+                jsonObjectOperation.put("startTime",ft.format((date.getTime()-makespan*60*1000+operation.getStart()*60*1000)));
+                jsonObjectOperation.put("endTime",ft.format((date.getTime()-makespan*60*1000+operation.getEnd()*60*1000)));
+                jsonObjectOperation.put("waitTime",operation.getWaitTime());
+                jsonObjectOperation.put("distTime",operation.getDistTime());
+                if (operation.getOperationType()==0){
+                    String s = operation.getSeat().getStationPosition().split("S")[1];
+                    jsonObjectOperation.put("stationId",Integer.parseInt(s));
+                }else
+                    jsonObjectOperation.put("stationId",null);
+                switch (operation.getOperationType()){
+                    case 0 :
+                        jsonObject.put("oil_station_operation",jsonObjectOperation);
+                        break;
+                    case 1 :
+                        jsonObject.put("armmo_operation",jsonObjectOperation);
+                        break;
+                    case 2 :
+                        jsonObject.put("wait_fly_operation",jsonObjectOperation);
+                        break;
+                }
+            }
             record.add(jsonObject);
             solutionArray.addAll(record);
         }
+
+
         try {
             FileWriter fileWriter = new FileWriter(new File( Main.class.getClassLoader().getResource("data").getPath(),"solved.json"));
             PrintWriter printWriter = new PrintWriter(fileWriter);

@@ -7,16 +7,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.InvocationTargetException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONReader;
-import com.fasterxml.jackson.databind.util.BeanUtil;
 import org.apache.commons.beanutils.BeanUtils;
 
 public class Importer {
+//    public  List<Long> PLANE_ID = new ArrayList<>();
     private List<PlaneJZJ> planeList;
     private List<Seat> seatList;
     private List<Seat> oilSeatList;
@@ -74,6 +75,15 @@ public class Importer {
             JSONObject jsonObject = JSONObject.parseObject(s);
             JSONArray jsonArrayPlane = jsonObject.getJSONArray("plane");
             planeList = JSONArray.parseArray(jsonArrayPlane.toString(),PlaneJZJ.class);
+            JSONArray oil_station = jsonObject.getJSONArray("oil_station");
+
+            //遍历油站
+            for (int i = 0; i < oil_station.size(); i++) {
+                JSONArray serve_parking = oil_station.getJSONObject(0).getJSONArray("serve_parking");
+                Double speed = oil_station.getJSONObject(0).getDouble("speed");
+                Long stationId = oil_station.getJSONObject(0).getLong("stationId");
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -84,7 +94,22 @@ public class Importer {
         oilStationList = new XmlIO<OilStation>(stationPath).xml2Object();
         orderList = new XmlIO<Order>(orderPath).xml2Object();
 
+        //设置开始时间
+        if (planeList!=null){
+            String landTime = planeList.get(0).getTakeoffTime();
+            SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+            try {
+                Date parse = ft.parse(landTime);
+                Setting.DATE.setTime(parse.getTime());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
 
+//        for (int i = 0; i < planeList.size(); i++) {
+//            PLANE_ID.add(i,planeList.get(i).getPlaneId());
+//            planeList.get(i).setPlaneId(i);
+//        }
 
         for (OilStation oilStation : oilStationList)
             oilStationMap.put(oilStation.getPosition(),oilStation);

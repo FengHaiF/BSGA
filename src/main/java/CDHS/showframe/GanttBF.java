@@ -1,7 +1,7 @@
 package CDHS.showframe;
 
-import CDHS.app.Setting;
 import CDHS.app.Solution;
+import CDHS.app.SolutionBF;
 import CDHS.domain.Operation;
 import CDHS.persistence.Importer;
 
@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @SuppressWarnings("all")
-public class Gantt extends JPanel {
+public class GanttBF extends JPanel {
     private int starttime = 8 * 60;
     private int endtime = 11 * 60;
     private int blank;
@@ -21,19 +21,18 @@ public class Gantt extends JPanel {
     private int numOfZW;
     private float hJZJ;
     private float wZW;
-    private Solution solution;
+    private SolutionBF solutionBF;
     private Point lt;
     private Point lb;
     private Point rt;
     private Point rb;
 
-    public Gantt(Solution solution, Importer importer) {
-        this.solution = solution;
+    public GanttBF(SolutionBF solution, Importer importer) {
+        this.solutionBF = solution;
         numOfJZJ = importer.getNumOfPlane();
 //        numOfZW = importer.ge;
         init();
     }
-
     @Override
     public void paint(Graphics g) {
         super.paint(g);
@@ -57,7 +56,7 @@ public class Gantt extends JPanel {
     }
 
     public void drawItem(Graphics2D g) {
-        List<Operation> result = solution.getOperationList();
+        List<Operation> result = solutionBF.getOperationList();
         for (Operation operation : result) {
             String name = getZWName(operation);
             double time = operation.getDuration();
@@ -74,7 +73,7 @@ public class Gantt extends JPanel {
             int strx = x + width / 2 - getStringWidth(name, g.getFont()) / 2;
             int stry = y - heigth / 2 + getStringHeight(name, g.getFont()) / 2;
             if (operation.getOperationType()==2)
-                g.drawString(name,lt.x + (int)solution.getMakespan()*wZW+15, stry);
+                g.drawString(name,lt.x + (int)solutionBF.getMakespan()*wZW+5, stry);
             else
                 g.drawString(name, strx, stry);
 
@@ -87,20 +86,25 @@ public class Gantt extends JPanel {
             if (operation.getWaitTime()!=0){
                 int waitWidth = (int) (operation.getWaitTime() * wZW);
                 g.setColor(Color.pink);
-                g.fillRect(x + width, y-heigth, waitWidth, heigth+1);
+                g.fillRect(x + width + 1, y-heigth, waitWidth-1, heigth+1);
+            }
+            if (operation.getOperationType()==1){
+                int waitWidth = (int) (operation.getColdTime() * wZW);
+                g.setColor(Color.CYAN);
+                g.fillRect(x + width + 1, y-heigth, waitWidth-1, heigth+1);
             }
 
             g.setColor(Color.lightGray);
-            g.fillRect(x-width_tran , y-heigth, width_tran, heigth+1);
+            g.fillRect(x-width_tran +1, y-heigth, width_tran, heigth+1);
             g.setColor(Color.BLACK);
             //距离显示
 //            g.drawString(String.valueOf(trantime),x, y-heigth);
         }
         //画最后makespan线
-        int x = (int)(lt.x + solution.getMakespan()*wZW);
+        int x = (int)(lt.x + solutionBF.getMakespan()*wZW);
 //        System.out.println("Print" + solution.getMakespan());
         g.drawLine(x, lb.y,x, lt.y);
-        g.drawString(String.format("%.2f",solution.getMakespan()), x, lb.y + 15);
+        g.drawString(String.valueOf(solutionBF.getMakespan()), x, lb.y + 15);
     }
 
     private void drawAxis(Graphics2D g) {
@@ -115,9 +119,9 @@ public class Gantt extends JPanel {
             int y = (int) (lt.y + i * (hJZJ + 10) + (hJZJ + 10) / 2);
             g.drawLine(x, y, x + 2, y);
             String name = "F" + (i);
-            g.drawString(name, x - 50, y+5);
-            String init = "M" + Setting.INITIAL_TABLE[i];
-            g.drawString(init, x - 25, y+5);
+            g.drawString(name, x - 25, y+5);
+//            String init = "M" + INIT_TABLE[i];
+//            g.drawString(init, x - 25, y+5);
         }
         strname="Aircraft";
         strx=50;

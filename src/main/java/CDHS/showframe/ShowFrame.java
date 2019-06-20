@@ -2,6 +2,7 @@ package CDHS.showframe;
 
 import CDHS.GA.AlleleF;
 import CDHS.app.Solution;
+import CDHS.app.SolutionBF;
 import CDHS.persistence.Importer;
 import io.jenetics.AnyGene;
 import io.jenetics.DoubleGene;
@@ -15,6 +16,21 @@ import java.awt.*;
 
 @SuppressWarnings("all")
 public class ShowFrame {
+
+    public void BF_ShowFrame(Phenotype<AnyGene<AlleleF>, Float> phenotype, Importer importer) {
+        System.out.println("show: G="+phenotype.getGeneration()+" "+phenotype);
+
+        SolutionBF solution = new SolutionBF();
+        solution.calculateMakespan(phenotype.getGenotype(),importer);
+
+        JFrame jf = new JFrame();
+        GanttBF gantt = new GanttBF(solution,importer);
+
+        jf.setBounds(300, 50, 1000, 800);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.add(gantt);
+        jf.setVisible(true);
+    }
 
     public void SOGA_ShowFrame(Phenotype<AnyGene<AlleleF>, Float> phenotype, Importer importer) {
         System.out.println("show: G="+phenotype.getGeneration()+" "+phenotype);

@@ -4,35 +4,35 @@
   <CDHS.domain.OilStation>
     <stationId>0</stationId>
     <oilPipNum>1</oilPipNum>
-    <position>S1</position>
+    <position>S0</position>
     <stationEndTime>0</stationEndTime>
     <speed>10</speed>
   </CDHS.domain.OilStation>
   <CDHS.domain.OilStation>
     <stationId>1</stationId>
     <oilPipNum>1</oilPipNum>
-    <position>S2</position>
+    <position>S1</position>
     <stationEndTime>0</stationEndTime>
     <speed>10</speed>
   </CDHS.domain.OilStation>
   <CDHS.domain.OilStation>
     <stationId>2</stationId>
     <oilPipNum>1</oilPipNum>
-    <position>S3</position>
+    <position>S2</position>
     <stationEndTime>0</stationEndTime>
     <speed>10</speed>
   </CDHS.domain.OilStation>
   <CDHS.domain.OilStation>
     <stationId>3</stationId>
     <oilPipNum>1</oilPipNum>
-    <position>S4</position>
+    <position>S3</position>
     <stationEndTime>0</stationEndTime>
     <speed>10</speed>
   </CDHS.domain.OilStation>
   <CDHS.domain.OilStation>
     <stationId>4</stationId>
     <oilPipNum>1</oilPipNum>
-    <position>S5</position>
+    <position>S4</position>
     <stationEndTime>0</stationEndTime>
     <speed>10</speed>
   </CDHS.domain.OilStation>

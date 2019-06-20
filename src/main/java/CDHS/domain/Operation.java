@@ -160,6 +160,8 @@ public class Operation {
                 ", operationType=" + operationType +
                 ", previousSeatId=" + previousSeatId +
                 ", distTime=" + distTime +
+                ", waitTime=" + waitTime +
+                ", coldTime=" + coldTime +
                 '}'+'\n';
     }
 }

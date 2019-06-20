@@ -10,6 +10,8 @@ public abstract class AbstractPlane {
     protected int ammunitionMax;
     protected int ammunitionQuantity;
     protected long initialPosition;
+    protected String takeoffTime;
+    protected String landTime;
 
     public AbstractPlane() {
     }
@@ -96,6 +98,22 @@ public abstract class AbstractPlane {
 
     public void setInitialPosition(long initialPosition) {
         this.initialPosition = initialPosition;
+    }
+
+    public String getTakeoffTime() {
+        return takeoffTime;
+    }
+
+    public void setTakeoffTime(String takeoffTime) {
+        this.takeoffTime = takeoffTime;
+    }
+
+    public String getLandTime() {
+        return landTime;
+    }
+
+    public void setLandTime(String landTime) {
+        this.landTime = landTime;
     }
 
     @Override

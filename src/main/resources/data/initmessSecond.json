@@ -12,7 +12,7 @@
                 2
             ],
             "speed": 2,
-            "stationId": 0
+            "stationId": 2
         },
         {
             "serve_parking": [
@@ -23,7 +23,7 @@
                 6
             ],
             "speed": 2,
-            "stationId": 1
+            "stationId": 25
         },
         {
             "serve_parking": [
@@ -32,19 +32,19 @@
                 8
             ],
             "speed": 2,
-            "stationId": 2
+            "stationId": 27
         },
         {
             "serve_parking": [
-                10,
+                1,
                 11,
                 12,
                 7,
                 8,
-                9
+                0
             ],
             "speed": 2,
-            "stationId": 3
+            "stationId": 29
         },
         {
             "serve_parking": [
@@ -53,7 +53,7 @@
                 13
             ],
             "speed": 2,
-            "stationId": 4
+            "stationId": 31
         }
     ],
     "plane": [
@@ -61,155 +61,127 @@
             "ammunitionMax": 5,
             "ammunitionQuantity": 1,
             "initialPosition": 0,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 0,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 1,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 5,
             "ammunitionQuantity": 0,
             "initialPosition": 1,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 1,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 11,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 5,
             "ammunitionQuantity": 0,
-            "initialPosition": 10,
-            "landTime": "2000.01.01 10:00:00",
+            "initialPosition": 1,
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 2,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 12,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 5,
             "ammunitionQuantity": 3,
             "initialPosition": 11,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 3,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 13,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 12,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 4,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 14,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 13,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 5,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 15,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 2,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 6,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 16,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 3,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 7,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 17,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 4,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 8,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 18,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 5,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 9,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 19,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 6,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 10,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 20,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 7,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 11,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 21,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 0,
             "initialPosition": 8,
-            "landTime": "2000.01.01 10:00:00",
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 12,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 22,
+            "planeSpeed": 5
         },
         {
             "ammunitionMax": 6,
             "ammunitionQuantity": 3,
-            "initialPosition": 9,
-            "landTime": "2000.01.01 10:00:00",
+            "initialPosition": 0,
             "oilMax": 100,
-            "oilQuantity": 10,
-            "planeId": 13,
-            "planeSpeed": 5,
-            "takeoffTime": "2000.01.01 08:04:00"
+            "oilQuantity": 0,
+            "planeId": 23,
+            "planeSpeed": 5
         }
     ],
     "tractor": [

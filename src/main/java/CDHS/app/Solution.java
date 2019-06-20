@@ -65,6 +65,10 @@ public class Solution {
         return makespan;
     }
 
+    public Map<Long, List<Operation>> getOperationPlaneMap() {
+        return operationPlaneMap;
+    }
+
     private void operationListInit(Genotype<AnyGene<AlleleF>> genotype, Importer importer){
         int numOfPlane = importer.getNumOfPlane();
 
@@ -107,6 +111,7 @@ public class Solution {
         for (OilStation oilStation : importer.getOilStationList()) {
             pipEndTimeMap.put(oilStation.getPosition(),new HashMap<>());
         }
+
         for (Seat seat : importer.getOilSeatList()) {
             pipEndTimeMap.get(seat.getStationPosition()).put(seat.getOilPipId(),0.0);
         }

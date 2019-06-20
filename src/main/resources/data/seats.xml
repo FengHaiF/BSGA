@@ -8,7 +8,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S1</string>
+      <string>S0</string>
     </stationList>
     <!--<stationPosition>XX</stationPosition>-->
   </CDHS.domain.Seat>
@@ -19,7 +19,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S1</string>
+      <string>S0</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -30,8 +30,8 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
+      <string>S0</string>
       <string>S1</string>
-      <string>S2</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -42,7 +42,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S2</string>
+      <string>S1</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -53,7 +53,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S2</string>
+      <string>S1</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -64,7 +64,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S2</string>
+      <string>S1</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -75,8 +75,8 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
+      <string>S1</string>
       <string>S2</string>
-      <string>S3</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -87,8 +87,8 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
+      <string>S2</string>
       <string>S3</string>
-      <string>S4</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -99,8 +99,8 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
+      <string>S2</string>
       <string>S3</string>
-      <string>S4</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -111,7 +111,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S4</string>
+      <string>S3</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -122,7 +122,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S4</string>
+      <string>S3</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -133,8 +133,8 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
+      <string>S3</string>
       <string>S4</string>
-      <string>S5</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -145,8 +145,8 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
+      <string>S3</string>
       <string>S4</string>
-      <string>S5</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -157,7 +157,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S5</string>
+      <string>S4</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -168,7 +168,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S1</string>
+      <string>S0</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
@@ -179,7 +179,7 @@
     <oilFlag>true</oilFlag>
     <dyFlag>true</dyFlag>
     <stationList>
-      <string>S5</string>
+      <string>S4</string>
     </stationList>
     <stationPosition>XX</stationPosition>
   </CDHS.domain.Seat>
