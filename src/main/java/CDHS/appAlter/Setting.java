@@ -1,6 +1,5 @@
-package CDHS.app;
+package CDHS.appAlter;
 
-import CDHS.persistence.Importer;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import org.apache.poi.ss.usermodel.Row;
@@ -18,9 +17,10 @@ import java.util.List;
 public class Setting {
     public static int LIMIT_GENERATION;
     public static int NUM_OF_MATAINANCE;
+    public static int NUM_OF_NEXT;
     public static int POPULATION_SIZE;
     public static double QYC_SPEED = 90;
-    public static double ZB_DURATION = 10;
+    public static double ZB_DURATION = 5;
     public static double COLD_DURATION = 2;
 
     public static List<List<Double>> DIST_TABLE = new ArrayList<>();
@@ -32,7 +32,6 @@ public class Setting {
             {1,0,2}
     };
 
-    public static long[] TAKEOFF_TABLE = {14,15,0,1,2,3,4,5,6,7,8,9,10,11};
     public static long[] INITIAL_TABLE = {14,3,2,15,6,5,7,1,4,7,8,9,10,11};
 
     public static Date DATE;
@@ -46,8 +45,9 @@ public class Setting {
             case SET_MODE_01:
                 setDistTable(DIST_TABLE,DIST_PATH);
                 POPULATION_SIZE = 20;
-                LIMIT_GENERATION  = 5000;
+                LIMIT_GENERATION  = 300;
                 NUM_OF_MATAINANCE = 2;
+                NUM_OF_NEXT = 3;
                 DATE = new Date();
                 break;
             case SET_MODE_02:

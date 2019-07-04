@@ -1,6 +1,6 @@
 package CDHS.persistence;
 
-import CDHS.app.Setting;
+import CDHS.appAlter.Setting;
 import CDHS.domain.*;
 
 import java.io.File;
@@ -16,6 +16,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONReader;
 import org.apache.commons.beanutils.BeanUtils;
 
+@SuppressWarnings("all")
 public class Importer {
 //    public  List<Long> PLANE_ID = new ArrayList<>();
     private List<PlaneJZJ> planeList;
@@ -23,15 +24,20 @@ public class Importer {
     private List<Seat> oilSeatList;
     private List<Seat> dySeatList;
     private List<OilStation> oilStationList;
-    private List<Order> orderList;
+    private List<Seat> orderList;
     private List<Seat> bfList;
     private List<Seat> zbList;
     private List<Seat> tsqList;
 
     private Map<Long,PlaneJZJ> planeJZJMap;
-    private Map<Long,Seat> oilSeatMap;
-    private Map<Long,Seat> dySeatMap;
-    private Map<Long,Order> orderMap;
+    private Map<Integer,List<Seat>> matainanceSeatMap;
+    private Map<Integer,Seat> oilSeatMap;
+    private Map<Integer,Seat> dySeatMap;
+    private Map<Integer,Seat> orderMap;
+
+    private Map<Integer,Seat> bfSeatMap;
+    private Map<Integer,Seat> tsqSeatMap;
+
     private Map<String,OilStation> oilStationMap;
 
 
@@ -55,6 +61,7 @@ public class Importer {
     }
 
     private void init(){
+
         oilSeatList = new ArrayList<>();
         dySeatList = new ArrayList<>();
         oilStationList = new ArrayList<>();
@@ -62,6 +69,10 @@ public class Importer {
         bfList = new ArrayList<>();
         zbList = new ArrayList<>();
         tsqList = new ArrayList<>();
+
+        matainanceSeatMap = new HashMap<>();
+        bfSeatMap = new HashMap<>();
+        tsqSeatMap = new HashMap<>();
 
         planeJZJMap = new HashMap<>();
         oilSeatMap = new HashMap<>();
@@ -92,7 +103,7 @@ public class Importer {
 //        planeList = new XmlIO<PlaneJZJ>(planePath).xml2Object();
         seatList = new XmlIO<Seat>(seatPath).xml2Object();
         oilStationList = new XmlIO<OilStation>(stationPath).xml2Object();
-        orderList = new XmlIO<Order>(orderPath).xml2Object();
+        orderList = new XmlIO<Seat>(orderPath).xml2Object();
 
         //设置开始时间
         if (planeList!=null){
@@ -105,11 +116,6 @@ public class Importer {
                 e.printStackTrace();
             }
         }
-
-//        for (int i = 0; i < planeList.size(); i++) {
-//            PLANE_ID.add(i,planeList.get(i).getPlaneId());
-//            planeList.get(i).setPlaneId(i);
-//        }
 
         for (OilStation oilStation : oilStationList)
             oilStationMap.put(oilStation.getPosition(),oilStation);
@@ -129,6 +135,7 @@ public class Importer {
                     seatOil.setOilPipId(0L);
                     seatOil.setStationPosition(s);
                     oilSeatList.add(seatOil);
+
                 }
             }
             if (seat.isDyFlag()){
@@ -149,17 +156,55 @@ public class Importer {
 
         for (PlaneJZJ planeJZJ : planeList)
             planeJZJMap.put(planeJZJ.getPlaneId(),planeJZJ);
-        for (Seat seat : oilSeatList)
-            oilSeatMap.put(seat.getSeatId(),seat);
-        for (Seat seat : dySeatList)
-            dySeatMap.put(seat.getSeatId(),seat);
-        for (Order order : orderList)
-            orderMap.put(order.getOrderId(),order);
+        for (int i = 0; i < oilSeatList.size(); i++) {
+            Seat seat = oilSeatList.get(i);
+            seat.set_id(i);
+            oilSeatMap.put(seat.get_id(),seat);
+        }
+        for (int i = 0; i < dySeatList.size(); i++) {
+            Seat seat = dySeatList.get(i);
+            seat.set_id(i);
+            dySeatMap.put(seat.get_id(),seat);
+        }
+        for (int i = 0; i < orderList.size(); i++) {
+            Seat order = orderList.get(i);
+            order.set_id(i);
+            orderMap.put(order.get_id(),order);
+        }
+        for (int i = 0; i < bfList.size(); i++) {
+            Seat seat = bfList.get(i);
+            seat.set_id(i);
+            bfSeatMap.put(seat.get_id(),seat);
+        }
+        for (int i = 0; i < tsqList.size(); i++) {
+            Seat seat = tsqList.get(i);
+            seat.set_id(i);
+            tsqSeatMap.put(seat.get_id(),seat);
+        }
 
         for (int i = 0; i < planeList.size(); i++) {
             Setting.INITIAL_TABLE[i] = planeList.get(i).getInitialPosition();
         }
 
+        for (int i = 0; i < Setting.NUM_OF_MATAINANCE + Setting.NUM_OF_NEXT; i++) {
+            switch (i){
+                case 0:
+                    matainanceSeatMap.put(i,oilSeatList);
+                    break;
+                case 1:
+                    matainanceSeatMap.put(i,dySeatList);
+                    break;
+                case 2:
+                    matainanceSeatMap.put(i,orderList);
+                    break;
+                case 3:
+                    matainanceSeatMap.put(i, bfList);
+                    break;
+                case 4:
+                    matainanceSeatMap.put(i,tsqList);
+                    break;
+            }
+        }
 
         System.out.println(oilSeatList);
         System.out.println(dySeatList);
@@ -255,11 +300,11 @@ public class Importer {
         this.oilStationList = oilStationList;
     }
 
-    public List<Order> getOrderList() {
+    public List<Seat> getOrderList() {
         return orderList;
     }
 
-    public void setOrderList(List<Order> orderList) {
+    public void setOrderList(List<Seat> orderList) {
         this.orderList = orderList;
     }
 
@@ -295,6 +340,13 @@ public class Importer {
         Importer.orderPath = orderPath;
     }
 
+    public Map<Integer, List<Seat>> getMatainanceSeatMap() {
+        return matainanceSeatMap;
+    }
+
+    public void setMatainanceSeatMap(Map<Integer, List<Seat>> matainanceSeatMap) {
+        this.matainanceSeatMap = matainanceSeatMap;
+    }
 
     public static void main(String[] args) {
         new Importer().init();

@@ -19,12 +19,8 @@ public class Seat extends AbstractSeat {
     public Seat() {
     }
 
-    public Seat(int _id, int _type, String _name) {
-        super(_id, _type, _name);
-    }
-
-    public Seat(int _id, int _type, String _name, int seatType, long seatId, String seatSize, boolean oilFlag, boolean dyFlag, List<String> stationList, String stationPosition, Long oilPipId) {
-        super(_id, _type, _name, seatType, seatId, seatSize, oilFlag, dyFlag, stationList, stationPosition);
+    public Seat(int seatType, long seatId, String seatSize, boolean oilFlag, boolean dyFlag, List<String> stationList, String stationPosition, Long oilPipId) {
+        super(seatType, seatId, seatSize, oilFlag, dyFlag, stationList, stationPosition);
         this.oilPipId = oilPipId;
     }
 

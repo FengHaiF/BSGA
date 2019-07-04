@@ -2,34 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="059adca4-838d-4422-b640-df42e167d4cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CDHS/showframe/GanttBF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/initmess3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/initmessSecond.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractPlane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/GA/AlleleF.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/GA/GeneF.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/app/WebApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/controller/controller.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/domain/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/domain/PlaneJZJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/domain/PlaneJZJ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/domain/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/domain/Seat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/echart/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/exampleTest/Demo1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/persistence/XmlIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/persistence/XmlIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/showframe/GanttBF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/showframe/GanttBF.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data/initmess.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/initmess.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/seats.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/seats.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/stations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/stations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/absplanner/AbstractPlane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/absplanner/AbstractPlane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/orders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/orders.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/absplanner/AbstractSeat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/absplanner/AbstractSeat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/SetMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/SetMode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/Setting$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/Setting$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/Setting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/Setting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/app/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/app/Solution.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/Operation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/PlaneJZJ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/PlaneJZJ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/Seat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/persistence/Importer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/persistence/Importer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/persistence/XmlIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/persistence/XmlIO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/showframe/Gantt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/showframe/Gantt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/showframe/ShowFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/showframe/ShowFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/seats.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/seats.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/stations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/stations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data/orders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/orders.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,62 +54,77 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/BSGA$Main.ic" NAME="Main Coverage Results" MODIFIED="1562143878737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>CDHS.appAlter.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="GA_CDHS" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Chromosome#0;class#Chromosome#0" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#369#370#0" expanded="true" />
+                <element signature="e#402#403#0" expanded="true" />
+                <element signature="e#430#431#0" expanded="true" />
+                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="e#1550#1551#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
-              <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+            <state relative-caret-position="1072">
+              <caret line="94" column="59" lean-forward="true" selection-start-line="94" selection-start-column="59" selection-end-line="94" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#10379#10515#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmess.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2268">
-              <caret line="90" column="52" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1851#1852#0" expanded="true" />
-                <element signature="e#1882#1883#0" expanded="true" />
-                <element signature="e#1946#1947#0" expanded="true" />
-                <element signature="e#1986#1987#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractPlane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
-              <folding>
-                <element signature="e#2553#2554#0" expanded="true" />
-                <element signature="e#2607#2608#0" expanded="true" />
-                <element signature="e#2653#2654#0" expanded="true" />
-                <element signature="e#2688#2689#0" expanded="true" />
-                <element signature="e#2719#2720#0" expanded="true" />
-                <element signature="e#2767#2768#0" expanded="true" />
-                <element signature="e#2807#2808#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/OilStation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="26">
+              <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -102,77 +132,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-961">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="1512">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1737#1738#0" expanded="true" />
-                <element signature="e#1775#1776#0" expanded="true" />
+                <element signature="e#1976#1977#0" expanded="true" />
+                <element signature="e#2006#2007#0" expanded="true" />
+                <element signature="e#2052#2053#0" expanded="true" />
+                <element signature="e#2092#2093#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/GA/GeneF.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+            <state relative-caret-position="270">
+              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1784">
-              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2702">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#3113#3114#0" expanded="true" />
-                <element signature="e#3144#3145#0" expanded="true" />
-                <element signature="e#3192#3193#0" expanded="true" />
-                <element signature="e#3232#3233#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/controller/controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-83">
-              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2176">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#160#184#0" expanded="true" />
+                <element signature="method#initPopulation#0;class#GeneEngine#0" />
+                <element signature="method#sortPopulation#0;class#GeneEngine#0" />
+                <element signature="method#mutation#0;class#GeneEngine#0" />
+                <element signature="method#crossoverSinglePoint#0;class#GeneEngine#0" />
+                <element signature="method#crossoverSinglePoint#1;class#GeneEngine#0" />
+                <element signature="method#rouletteInit#0;class#GeneEngine#0" />
+                <element signature="method#roulette#0;class#GeneEngine#0" />
+                <element signature="method#roulette#1;class#GeneEngine#0" />
+                <element signature="method#getAllele#0;class#GeneEngine#0" />
               </folding>
             </state>
           </provider>
@@ -208,9 +196,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test" />
+        <entry key="$PROJECT_DIR$" value="加布放计划" />
       </map>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -218,39 +209,45 @@
         <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Solution.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Makespan.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/persistence/OrderStrengthComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/app/ShowFrame.java" />
         <option value="$PROJECT_DIR$/src/main/resources/setting.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/data/orders.xml" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/OilStation.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/GA/AlleleF.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/persistence/XmlIO.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Vec.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/GA/GeneF.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/exampleTest/Demo1.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/app/WebApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/controller/controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/echart/echart.html" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Seat.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/persistence/ToXml.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/TimeBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/PlaneJZJ.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/data/planes.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/data/initmess.json" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data/seats.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/GanttBF.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractPlane.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data/stations.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/GanttBF.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/AlleleF.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/data/orders.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/PlaneJZJ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/persistence/XmlIO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Seat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/data/initmess.json" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java" />
       </list>
     </option>
   </component>
@@ -260,6 +257,11 @@
         <option name="mavenHome" value="D:/apache-maven-3.6.1" />
         <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -294,7 +296,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
@@ -306,44 +308,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="CDHS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -351,36 +351,27 @@
               <item name="absplanner" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="appAlter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="appAlter" type="462c0819:PsiDirectoryNode" />
               <item name="Setting.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -388,35 +379,17 @@
               <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="echart" type="462c0819:PsiDirectoryNode" />
+              <item name="MyGA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="exampleTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="GA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -424,51 +397,26 @@
               <item name="persistence" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="showframe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
+              <item name="BSGA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BSGA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GA_CDHS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GA_CDHS" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -479,31 +427,39 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561033283612" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jenetics-4.4.0" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562148886123" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\resources\data" />
-      <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\java\CDHS\echart" />
-      <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\lib" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="CDHS.showframe" />
-      <recent name="CDHS.app" />
-      <recent name="CDHS.exampleTest" />
-      <recent name="CDHS.domain" />
-      <recent name="CDHS.GA" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="CDHS.appAlter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ZXY\Desktop\BSGA\src\main\java\CDHS" />
       <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\resources\data" />
       <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\java\CDHS\app" />
       <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\resources" />
       <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\java\CDHS" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="CDHS.MyGA" />
+      <recent name="CDHS.app" />
+      <recent name="CDHS.showframe" />
+      <recent name="CDHS.exampleTest" />
+      <recent name="CDHS.domain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\java\CDHS\app" />
+      <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\resources\data" />
+      <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\java\CDHS\echart" />
+      <recent name="C:\Users\ZXY\Desktop\GA_CDHS\src\main\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -521,7 +477,7 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="Importer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CDHS.persistence.Importer" />
-      <module name="GA_CDHS" />
+      <module name="BSGA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="CDHS.persistence.*" />
@@ -533,53 +489,14 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CDHS.app.Main" />
-      <module name="GA_CDHS" />
+      <option name="MAIN_CLASS_NAME" value="CDHS.appAlter.Main" />
+      <module name="BSGA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CDHS.app.*" />
+          <option name="PATTERN" value="CDHS.appAlter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Setting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CDHS.app.Setting" />
-      <module name="GA_CDHS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CDHS.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ToXml" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CDHS.persistence.ToXml" />
-      <module name="GA_CDHS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CDHS.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="GA_CDHS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CDHS.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="CDHS.app.WebApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -587,9 +504,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Setting" />
-        <item itemvalue="Spring Boot.WebApp" />
-        <item itemvalue="Application.ToXml" />
         <item itemvalue="Application.Importer" />
       </list>
     </recent_temporary>
@@ -627,7 +541,14 @@
       <workItem from="1560390680708" duration="25643000" />
       <workItem from="1560657452656" duration="41242000" />
       <workItem from="1560863305127" duration="3235000" />
-      <workItem from="1560929685419" duration="6348000" />
+      <workItem from="1560929685419" duration="7743000" />
+      <workItem from="1561177598126" duration="3097000" />
+      <workItem from="1561360466527" duration="2206000" />
+      <workItem from="1561363236301" duration="36608000" />
+      <workItem from="1561711793058" duration="240000" />
+      <workItem from="1561712085537" duration="13501000" />
+      <workItem from="1562049838739" duration="19630000" />
+      <workItem from="1562149973411" duration="17348000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;0529更改&quot;">
       <created>1559130974243</created>
@@ -671,17 +592,32 @@
       <option name="project" value="LOCAL" />
       <updated>1560737785013</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&quot;0620月底演示版本&quot;">
+      <created>1561033306138</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561033306138</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302018000" />
+    <option name="totallyTimeSpent" value="396043000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17287917" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18701799" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -690,19 +626,19 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.1509434" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21967655" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.38948786" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.06334232" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26415095" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38948786" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.13342318" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.41778976" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.4218329" />
-      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32884097" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.36657682" />
+      <window_info anchor="bottom" id="Spring" order="13" weight="0.32884097" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -714,6 +650,7 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32969153" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22788605" />
@@ -807,39 +744,39 @@
     <MESSAGE value="&quot;注释整理了一部分&quot;" />
     <MESSAGE value="&quot;注释solution整理完成&quot;" />
     <MESSAGE value="&quot;准备写布放计划&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;准备写布放计划&quot;" />
+    <MESSAGE value="&quot;0620月底演示版本&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;0620月底演示版本&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/CDHS/app/Main.java</url>
-          <line>291</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java</url>
-          <line>113</line>
+          <line>352</line>
           <properties />
-          <option name="timeStamp" value="43" />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="planeList" language="JAVA" />
+        <watch expression="oilSeatList.get(getRandom(oilSeatList.size())).get_id()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>oilSeatList.get(getRandom(oilSeatList.size())).get_id()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>planeList</expression-string>
         <language-id>JAVA</language-id>
@@ -885,166 +822,14 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>Setting.PLANE_ID.</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/engine/Codec.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/util/DoubleRange.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics.ext/4.3.0/jenetics.ext-4.3.0.jar!/io/jenetics/ext/moea/Vec.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/engine/Codecs.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3105">
-          <caret line="155" column="55" selection-start-line="155" selection-start-column="48" selection-end-line="155" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/engine/Problem.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Iterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="71" column="51" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/echart/jquery-3.4.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/exampleTest/Demo1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="29" column="60" selection-start-line="28" selection-start-column="24" selection-end-line="29" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/orders.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/persistence/ToXml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/AnyChromosome.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="932">
-          <caret line="71" column="69" selection-start-line="71" selection-start-column="69" selection-end-line="71" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/engine/EvolutionResult.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2862">
-          <caret line="153" column="116" selection-start-line="153" selection-start-column="116" selection-end-line="153" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/TimeBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/GA/AlleleF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics.ext/4.3.0/jenetics.ext-4.3.0.jar!/io/jenetics/ext/moea/MOEA.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="36" column="133" selection-start-line="36" selection-start-column="133" selection-end-line="36" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/util/ISeq.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/echart/echart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" selection-start-line="6" selection-end-line="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/echart/echart.html" />
     <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/MultiPointCrossover.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/engine/Engine.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="280" column="95" selection-start-line="280" selection-start-column="95" selection-end-line="280" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -1055,34 +840,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/WebApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/PlaneJZJ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
-          <folding>
-            <element signature="e#2159#2160#0" expanded="true" />
-            <element signature="e#2204#2205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/WebApp.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.47/fastjson-1.2.47.jar!/com/alibaba/fastjson/JSON.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -1092,22 +850,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/solved.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/solved.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/planes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="152" column="16" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/planes.xml" />
     <entry file="file://$PROJECT_DIR$/target/classes/data/solved.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/seats.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="103" column="18" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/Phenotype.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1116,89 +861,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/GanttBF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmessSecond.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/Seat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="26" column="96" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Seat#0;class#Seat#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmess3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="307" column="74" selection-start-line="307" selection-start-column="74" selection-end-line="307" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#SingleObjSolverBZ#0;class#Main#0" />
-            <element signature="method#getSeqOfBestPhenotye#0;class#Main#0" />
-            <element signature="method#fitnessSingleBZ#0;class#Main#0" />
-            <element signature="method#printS#0;class#Main#0" />
-            <element signature="method#printM#0;class#Main#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmess.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmessSecond.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmess3.json" />
     <entry file="file://$PROJECT_DIR$/target/classes/data/seats.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2997" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/stations.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/stations.xml" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/stream/Stream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        <state relative-caret-position="-33801">
+          <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/engine/EvolutionStreamable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/engine/Engine.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="393" column="33" selection-start-line="393" selection-start-column="33" selection-end-line="393" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/engine/EvolutionStart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/controller/controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/GA/GeneF.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/GA/AlleleF.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jenetics/jenetics/4.3.0/jenetics-4.3.0.jar!/io/jenetics/AnyChromosome.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="48" column="83" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Main.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1611">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="52" column="34" lean-forward="true" selection-end-line="218" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/GanttBF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="26" lean-forward="true" selection-end-line="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="51" column="27" lean-forward="true" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Population.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/Order.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/seats.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" selection-start-line="3" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/orders.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/persistence/XmlIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/AlleleF.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Solution.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractPlane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1101">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/PlaneJZJ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/Seat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/TimeBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -1211,107 +1004,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2702">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="615">
+          <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
           <folding>
-            <element signature="e#3113#3114#0" expanded="true" />
-            <element signature="e#3144#3145#0" expanded="true" />
-            <element signature="e#3192#3193#0" expanded="true" />
-            <element signature="e#3232#3233#0" expanded="true" />
+            <element signature="e#3329#3330#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/controller/controller.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/SolutionBF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2176">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Setting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1784">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/app/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2268">
-          <caret line="90" column="52" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1851#1852#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
-            <element signature="e#1946#1947#0" expanded="true" />
-            <element signature="e#1986#1987#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractPlane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
-          <folding>
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2607#2608#0" expanded="true" />
-            <element signature="e#2653#2654#0" expanded="true" />
-            <element signature="e#2688#2689#0" expanded="true" />
-            <element signature="e#2719#2720#0" expanded="true" />
-            <element signature="e#2767#2768#0" expanded="true" />
-            <element signature="e#2807#2808#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="137" column="17" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/absplanner/AbstractSeat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-961">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="1512">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/GA/GeneF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2006#2007#0" expanded="true" />
+            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#2092#2093#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+        <state relative-caret-position="1072">
+          <caret line="94" column="59" lean-forward="true" selection-start-line="94" selection-start-column="59" selection-end-line="94" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#10379#10515#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmess.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Chromosome#0;class#Chromosome#0" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#160#184#0" expanded="true" />
+            <element signature="method#initPopulation#0;class#GeneEngine#0" />
+            <element signature="method#sortPopulation#0;class#GeneEngine#0" />
+            <element signature="method#mutation#0;class#GeneEngine#0" />
+            <element signature="method#crossoverSinglePoint#0;class#GeneEngine#0" />
+            <element signature="method#crossoverSinglePoint#1;class#GeneEngine#0" />
+            <element signature="method#rouletteInit#0;class#GeneEngine#0" />
+            <element signature="method#roulette#0;class#GeneEngine#0" />
+            <element signature="method#roulette#1;class#GeneEngine#0" />
+            <element signature="method#getAllele#0;class#GeneEngine#0" />
           </folding>
         </state>
       </provider>
@@ -1319,9 +1110,82 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>GA_CDHS</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3218391" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jenetics-4.0.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

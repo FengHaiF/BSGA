@@ -2,19 +2,20 @@ package CDHS.domain;
 
 
 import CDHS.absplanner.AbstractPlane;
+import org.springframework.core.annotation.Order;
 
 public class PlaneJZJ extends AbstractPlane {
     private Seat oilSeat;
     private Seat dySeat;
     private OilStation oilStation;
-    private Order order;
+    private Seat order;
 
 
-    public Order getOrder() {
+    public Seat getOrder() {
         return order;
     }
 
-    public void setOrder(Order order) {
+    public void setOrder(Seat order) {
         this.order = order;
     }
 
@@ -45,7 +46,7 @@ public class PlaneJZJ extends AbstractPlane {
     public PlaneJZJ() {
     }
 
-    public PlaneJZJ(long planeId, String task, String planeType, String planeSize, double oilMax, double oilQuantity, int ammunitionMax, int ammunitionQuantity, Seat oilSeat, Seat dySeat, OilStation oilStation,long initialPosition) {
+    public PlaneJZJ(long planeId, String task, String planeType, String planeSize, double oilMax, double oilQuantity, int ammunitionMax, int ammunitionQuantity, Seat oilSeat, Seat dySeat, OilStation oilStation, long initialPosition) {
         super(planeId, task, planeType, planeSize, oilMax, oilQuantity, ammunitionMax, ammunitionQuantity,initialPosition);
         this.oilSeat = oilSeat;
         this.dySeat = dySeat;
@@ -55,7 +56,7 @@ public class PlaneJZJ extends AbstractPlane {
     public long getPlaneOrderId(){
         if (order == null)
             return -1;
-        return order.getOrderId();
+        return order.getSeatId();
     }
 
     public long getPlaneOilSeatId(){

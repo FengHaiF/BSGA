@@ -1,10 +1,9 @@
 package CDHS.absplanner;
 
-import CDHS.GA.AlleleF;
-
 import java.util.List;
 
-public abstract class AbstractSeat extends AlleleF {
+public abstract class AbstractSeat {
+    protected int _id;
     protected int seatType;
     protected long seatId;
     protected String seatSize;
@@ -16,12 +15,7 @@ public abstract class AbstractSeat extends AlleleF {
     public AbstractSeat() {
     }
 
-    public AbstractSeat(int _id, int _type, String _name) {
-        super(_id, _type, _name);
-    }
-
-    public AbstractSeat(int _id, int _type, String _name, int seatType, long seatId, String seatSize, boolean oilFlag, boolean dyFlag, List<String> stationList, String stationPosition) {
-        super(_id, _type, _name);
+    public AbstractSeat(int seatType, long seatId, String seatSize, boolean oilFlag, boolean dyFlag, List<String> stationList, String stationPosition) {
         this.seatType = seatType;
         this.seatId = seatId;
         this.seatSize = seatSize;
@@ -85,6 +79,14 @@ public abstract class AbstractSeat extends AlleleF {
 
     public void setStationList(List<String> stationList) {
         this.stationList = stationList;
+    }
+
+    public int get_id() {
+        return _id;
+    }
+
+    public void set_id(int _id) {
+        this._id = _id;
     }
 
     @Override

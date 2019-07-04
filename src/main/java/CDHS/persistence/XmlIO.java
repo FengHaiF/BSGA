@@ -1,7 +1,6 @@
 package CDHS.persistence;
 
 import CDHS.domain.OilStation;
-import CDHS.domain.Order;
 import CDHS.domain.PlaneJZJ;
 import CDHS.domain.Seat;
 
@@ -11,6 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.Dom4JDriver;
+import org.springframework.core.annotation.Order;
 
 
 public class XmlIO<T> {
@@ -36,7 +36,7 @@ public class XmlIO<T> {
     public List<T> xml2Object(File xmlFile) {
         XStream xStream = new XStream(new Dom4JDriver());
         XStream.setupDefaultSecurity(xStream);
-        xStream.allowTypes(new Class[]{List.class, Order.class, OilStation.class, Seat.class, PlaneJZJ.class, HashSet.class, String.class, HashMap.class, String.class});
+        xStream.allowTypes(new Class[]{List.class, OilStation.class, Seat.class, PlaneJZJ.class, HashSet.class, String.class, HashMap.class, String.class});
         List<T> origin = (List<T>) xStream.fromXML(xmlFile);
         return origin;
     }

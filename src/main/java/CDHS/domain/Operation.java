@@ -13,6 +13,7 @@ public class Operation {
     private double coldTime;
     private int operationType;
     private long previousSeatId;
+    private long nextSeatId;
     private double distTime;
     private Operation previousOperation;
     private Operation nextOperation;
@@ -146,6 +147,14 @@ public class Operation {
 
     public void setColdTime(double coldTime) {
         this.coldTime = coldTime;
+    }
+
+    public long getNextSeatId() {
+        return nextSeatId;
+    }
+
+    public void setNextSeatId(long nextSeatId) {
+        this.nextSeatId = nextSeatId;
     }
 
     @Override
