@@ -5,10 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/persistence/Importer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/persistence/Importer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,8 +27,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="15">
-                    <caret line="216" column="17" selection-start-line="216" selection-start-column="17" selection-end-line="216" selection-end-column="17" />
+                  <state relative-caret-position="208">
+                    <caret line="133" column="8" lean-forward="true" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
                     <folding>
                       <element signature="imports" expanded="true" />
                       <element signature="method#rouletteInit#0;class#GeneEngine#0" />
@@ -43,9 +39,13 @@
                       <element signature="method#getAllele#1;class#GeneEngine#0" />
                       <element signature="method#getBfSeatList#0;class#GeneEngine#0" />
                       <element signature="method#sortPopulation#0;class#GeneEngine#0" />
-                      <element signature="method#initPopulation#0;class#GeneEngine#0" />
                       <element signature="method#engineBegin#0;class#GeneEngine#0" />
+                      <element signature="method#initPopulation#0;class#GeneEngine#0" />
                       <element signature="method#dieOut#0;class#GeneEngine#0" />
+                      <element signature="method#crossoverAndMutation#0;class#GeneEngine#0" />
+                      <element signature="method#mutation#0;class#GeneEngine#0" />
+                      <element signature="method#muntationBf#0;class#GeneEngine#0" />
+                      <element signature="method#crossoverBf#0;class#GeneEngine#0" />
                       <element signature="method#crossoverSinglePoint#0;class#GeneEngine#0" />
                       <element signature="method#crossoverDoublePoint#0;class#GeneEngine#0" />
                       <element signature="e#11242#11243#0" expanded="true" />
@@ -96,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+            <state relative-caret-position="73">
+              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,15 +108,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1647">
-              <caret line="74" column="33" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="33" />
+            <state relative-caret-position="777">
+              <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Chromosome#0;class#Chromosome#0" />
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-                <element signature="e#430#431#0" expanded="true" />
+                <element signature="method#initGeneList#0;class#Chromosome#0" />
+                <element signature="method#initGenes#0;class#Chromosome#0" />
+                <element signature="method#initFitness#0;class#Chromosome#0" />
               </folding>
             </state>
           </provider>
@@ -201,8 +200,8 @@
         <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data/initmess.json" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" />
       </list>
@@ -384,7 +383,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562315941144" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562325637840" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -506,7 +505,7 @@
       <workItem from="1561712085537" duration="13501000" />
       <workItem from="1562049838739" duration="19630000" />
       <workItem from="1562149973411" duration="23932000" />
-      <workItem from="1562232967502" duration="35304000" />
+      <workItem from="1562232967502" duration="42911000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;0529更改&quot;">
       <created>1559130974243</created>
@@ -564,11 +563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562211912634</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="&quot;0704遗传算法框架搭完&quot;">
+      <created>1562316000739</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1562316000740</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437931000" />
+    <option name="totallyTimeSpent" value="445538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -593,13 +599,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.180593" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16037735" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.92183286" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.63072777" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.2722372" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.29514825" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32884097" />
@@ -713,7 +719,8 @@
     <MESSAGE value="&quot;准备写布放计划&quot;" />
     <MESSAGE value="&quot;0620月底演示版本&quot;" />
     <MESSAGE value="&quot;0704遗传算法构建&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;0704遗传算法构建&quot;" />
+    <MESSAGE value="&quot;0704遗传算法框架搭完&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;0704遗传算法框架搭完&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -726,7 +733,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java</url>
-          <line>286</line>
+          <line>320</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
@@ -1039,23 +1046,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1647">
-          <caret line="74" column="33" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="33" />
+        <state relative-caret-position="777">
+          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Chromosome#0;class#Chromosome#0" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
+            <element signature="method#initGeneList#0;class#Chromosome#0" />
+            <element signature="method#initGenes#0;class#Chromosome#0" />
+            <element signature="method#initFitness#0;class#Chromosome#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="216" column="17" selection-start-line="216" selection-start-column="17" selection-end-line="216" selection-end-column="17" />
+        <state relative-caret-position="208">
+          <caret line="133" column="8" lean-forward="true" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#rouletteInit#0;class#GeneEngine#0" />
@@ -1066,23 +1082,17 @@
             <element signature="method#getAllele#1;class#GeneEngine#0" />
             <element signature="method#getBfSeatList#0;class#GeneEngine#0" />
             <element signature="method#sortPopulation#0;class#GeneEngine#0" />
-            <element signature="method#initPopulation#0;class#GeneEngine#0" />
             <element signature="method#engineBegin#0;class#GeneEngine#0" />
+            <element signature="method#initPopulation#0;class#GeneEngine#0" />
             <element signature="method#dieOut#0;class#GeneEngine#0" />
+            <element signature="method#crossoverAndMutation#0;class#GeneEngine#0" />
+            <element signature="method#mutation#0;class#GeneEngine#0" />
+            <element signature="method#muntationBf#0;class#GeneEngine#0" />
+            <element signature="method#crossoverBf#0;class#GeneEngine#0" />
             <element signature="method#crossoverSinglePoint#0;class#GeneEngine#0" />
             <element signature="method#crossoverDoublePoint#0;class#GeneEngine#0" />
             <element signature="e#11242#11243#0" expanded="true" />
             <element signature="e#11282#11283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

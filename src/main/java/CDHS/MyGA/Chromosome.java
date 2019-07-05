@@ -8,7 +8,9 @@ import java.util.Random;
 public class Chromosome {
     private int id;
     private double fitness;
+    //将所有基因放入一个list中
     private List<Integer> genes = new ArrayList<>();
+    //将gene里的基因按照保障种类分类
     private List<List<Integer>> geneList = new ArrayList<>();
 
     public Chromosome() {
@@ -46,11 +48,7 @@ public class Chromosome {
         this.geneList = geneList;
     }
 
-//    public void init(int planesize, int numOfMatainance){
-//        initGeneList(planesize,numOfMatainance);
-//        initFitness();
-//    }
-
+    //将Genes转换成GeneList
     public void initGeneList(int planesize, int numOfMatainance){
         if (genes!=null){
             for (int i = 0; i < numOfMatainance; i++) {
@@ -63,6 +61,7 @@ public class Chromosome {
         }
     }
 
+    //将GeneList转换成Genes
     public void initGenes(int planesize, int numOfMatainance){
         for (int i = 0; i < planesize; i++) {
             for (int j = 0; j < numOfMatainance; j++) {
@@ -70,6 +69,8 @@ public class Chromosome {
             }
         }
     }
+
+    //适应度计算（还没写完）
     public void initFitness(){
         fitness = 0;
         for (Integer gene : genes) {
