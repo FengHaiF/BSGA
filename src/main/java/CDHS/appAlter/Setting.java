@@ -20,6 +20,7 @@ public class Setting {
     public static int NUM_OF_NEXT;
     public static int POPULATION_SIZE;
     public static double QYC_SPEED = 90;
+    public static double MUTATION_RATE = 0.1;
     public static double ZB_DURATION = 5;
     public static double COLD_DURATION = 2;
 
@@ -45,7 +46,7 @@ public class Setting {
             case SET_MODE_01:
                 setDistTable(DIST_TABLE,DIST_PATH);
                 POPULATION_SIZE = 20;
-                LIMIT_GENERATION  = 300;
+                LIMIT_GENERATION  = 1000;
                 NUM_OF_MATAINANCE = 2;
                 NUM_OF_NEXT = 3;
                 DATE = new Date();
@@ -71,9 +72,6 @@ public class Setting {
             int lastRowIndex = sheet.getLastRowNum();
 
             Row row = sheet.getRow(fistRowIndex);
-//            for (Cell cell : row) {
-//
-//            }
             fistRowIndex += 1;
             for(int rIndex = fistRowIndex; rIndex <= lastRowIndex; rIndex++) {
                 row = sheet.getRow(rIndex);

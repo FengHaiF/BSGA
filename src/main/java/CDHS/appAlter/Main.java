@@ -3,8 +3,6 @@ package CDHS.appAlter;
 import CDHS.MyGA.GeneEngine;
 import CDHS.persistence.Importer;
 
-import java.util.List;
-
 public class Main {
     static Importer importer = new Importer();
 

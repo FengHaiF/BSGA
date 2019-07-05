@@ -348,6 +348,10 @@ public class Importer {
         this.matainanceSeatMap = matainanceSeatMap;
     }
 
+    public Map<Integer, Seat> getBfSeatMap() {
+        return bfSeatMap;
+    }
+
     public static void main(String[] args) {
         new Importer().init();
         System.out.println("over");

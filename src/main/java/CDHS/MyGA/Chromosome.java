@@ -46,25 +46,35 @@ public class Chromosome {
         this.geneList = geneList;
     }
 
-    public void init(int planesize, int numOfMatainance){
-        initGeneList(planesize,numOfMatainance);
-        initFitness();
-    }
+//    public void init(int planesize, int numOfMatainance){
+//        initGeneList(planesize,numOfMatainance);
+//        initFitness();
+//    }
 
-    private void initGeneList(int planesize, int numOfMatainance){
+    public void initGeneList(int planesize, int numOfMatainance){
         if (genes!=null){
             for (int i = 0; i < numOfMatainance; i++) {
                 List<Integer> geneM = new ArrayList<>();
                 for (int j = 0; j < planesize; j++) {
-                    geneM.add(genes.get(i*numOfMatainance+j));
+                    geneM.add(genes.get(j*numOfMatainance+i));
                 }
                 geneList.add(geneM);
             }
         }
     }
 
-    private void initFitness(){
-        fitness = (double) (new Random().nextInt(30)+1);
+    public void initGenes(int planesize, int numOfMatainance){
+        for (int i = 0; i < planesize; i++) {
+            for (int j = 0; j < numOfMatainance; j++) {
+                genes.set(i*numOfMatainance+j,geneList.get(j).get(i));
+            }
+        }
+    }
+    public void initFitness(){
+        fitness = 0;
+        for (Integer gene : genes) {
+            fitness+=gene;
+        }
     }
 
     @Override
