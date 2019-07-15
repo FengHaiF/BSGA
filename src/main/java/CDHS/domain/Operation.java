@@ -33,6 +33,18 @@ public class Operation {
         this.coldTime = 0;
     }
 
+    public void setOperation(int operationId, long planeId, Seat seat, double duration, double start, double end, int operationType) {
+        this.operationId = operationId;
+        this.planeId = planeId;
+        this.seat = seat;
+        this.duration = duration;
+        this.start = start;
+        this.end = end;
+        this.operationType = operationType;
+        this.waitTime = 0;
+        this.coldTime = 0;
+    }
+
     public String getStationPosition(){
         return seat.getStationPosition();
     }

@@ -1,6 +1,9 @@
 package CDHS.MyGA;
 
 
+import CDHS.appAlter.Solution;
+import CDHS.persistence.Importer;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -13,7 +16,27 @@ public class Chromosome {
     //将gene里的基因按照保障种类分类
     private List<List<Integer>> geneList = new ArrayList<>();
 
+    private List<Integer> orderGenes = new ArrayList<>();
+    private List<Integer> bfGenes = new ArrayList<>();
+
     public Chromosome() {
+
+    }
+
+    public List<Integer> getBfGenes() {
+        return bfGenes;
+    }
+
+    public void setBfGenes(List<Integer> bfGenes) {
+        this.bfGenes = bfGenes;
+    }
+
+    public List<Integer> getOrderGenes() {
+        return orderGenes;
+    }
+
+    public void setOrderGenes(List<Integer> orderGenes) {
+        this.orderGenes = orderGenes;
     }
 
     public int getId() {
@@ -71,11 +94,9 @@ public class Chromosome {
     }
 
     //适应度计算（还没写完）
-    public void initFitness(){
-        fitness = 0;
-        for (Integer gene : genes) {
-            fitness+=gene;
-        }
+    public void initFitness(Importer importer){
+        Solution solution = new Solution(this, importer);
+        solution.calculateMakespan();
     }
 
     @Override
@@ -85,6 +106,8 @@ public class Chromosome {
                 "id=" + id +
                 ", fitness=" + fitness +
                 ", genes=" + genes +
+                ", bf=" + bfGenes +
+                ", orders=" + orderGenes +
                 '}'+'\n';
     }
 }

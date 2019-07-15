@@ -44,7 +44,7 @@ public class Importer {
     private static String seatPath;
     private static String planePath;
     private static String stationPath;
-    private static String orderPath;
+//    private static String orderPath;
 
     private static String jsonPath;
 
@@ -52,7 +52,7 @@ public class Importer {
         seatPath = Importer.class.getClassLoader().getResource("data/seats.xml").getPath();
         planePath = Importer.class.getClassLoader().getResource("data/planes.xml").getPath();
         stationPath = Importer.class.getClassLoader().getResource("data/stations.xml").getPath();
-        orderPath = Importer.class.getClassLoader().getResource("data/orders.xml").getPath();
+//        orderPath = Importer.class.getClassLoader().getResource("data/orders.xml").getPath();
         jsonPath = Importer.class.getClassLoader().getResource("data/initmess.json").getPath();
     }
 
@@ -95,6 +95,11 @@ public class Importer {
                 Long stationId = oil_station.getJSONObject(0).getLong("stationId");
             }
 
+            for (int i = 0; i < Setting.NUM_OF_MATAINANCE * getNumOfPlane(); i++) {
+                Seat seat = new Seat();
+                seat.set_id(i);
+                orderList.add(seat);
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -103,7 +108,7 @@ public class Importer {
 //        planeList = new XmlIO<PlaneJZJ>(planePath).xml2Object();
         seatList = new XmlIO<Seat>(seatPath).xml2Object();
         oilStationList = new XmlIO<OilStation>(stationPath).xml2Object();
-        orderList = new XmlIO<Seat>(orderPath).xml2Object();
+//        orderList = new XmlIO<Seat>(orderPath).xml2Object();
 
         //设置开始时间
         if (planeList!=null){
@@ -195,12 +200,9 @@ public class Importer {
                     matainanceSeatMap.put(i,dySeatList);
                     break;
                 case 2:
-                    matainanceSeatMap.put(i,orderList);
-                    break;
-                case 3:
                     matainanceSeatMap.put(i, bfList);
                     break;
-                case 4:
+                case 3:
                     matainanceSeatMap.put(i,tsqList);
                     break;
             }
@@ -209,8 +211,9 @@ public class Importer {
         System.out.println(oilSeatList);
         System.out.println(dySeatList);
         System.out.println(planeList);
-        System.out.println(oilStationList);
         System.out.println(orderList);
+        System.out.println(oilStationList);
+
 
     }
 
@@ -230,6 +233,18 @@ public class Importer {
             }
         }
         return duration;
+    }
+
+    public Map<Integer, Seat> getOilSeatMap() {
+        return oilSeatMap;
+    }
+
+    public Map<Integer, Seat> getDySeatMap() {
+        return dySeatMap;
+    }
+
+    public Map<Integer, Seat> getTsqSeatMap() {
+        return tsqSeatMap;
     }
 
     public int getNumOfPlane(){
@@ -332,14 +347,6 @@ public class Importer {
         Importer.stationPath = stationPath;
     }
 
-    public static String getOrderPath() {
-        return orderPath;
-    }
-
-    public static void setOrderPath(String orderPath) {
-        Importer.orderPath = orderPath;
-    }
-
     public Map<Integer, List<Seat>> getMatainanceSeatMap() {
         return matainanceSeatMap;
     }
@@ -350,6 +357,10 @@ public class Importer {
 
     public Map<Integer, Seat> getBfSeatMap() {
         return bfSeatMap;
+    }
+
+    public Map<Integer, Seat> getOrderMap() {
+        return orderMap;
     }
 
     public static void main(String[] args) {

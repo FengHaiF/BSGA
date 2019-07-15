@@ -1,7 +1,11 @@
 package CDHS.appAlter;
 
+import CDHS.MyGA.Chromosome;
 import CDHS.MyGA.GeneEngine;
 import CDHS.persistence.Importer;
+import CDHS.showframe.ShowFrame;
+
+import java.util.List;
 
 public class Main {
     static Importer importer = new Importer();
@@ -12,9 +16,13 @@ public class Main {
 
         GeneEngine geneEngine = new GeneEngine(importer);
         geneEngine.engineBegin();
-//        List<List<String>> population = geneEngine.getPopulation();
+
+        List<Chromosome> population = geneEngine.population;
+
+        Chromosome chromosome = population.get(0);
+
+        new ShowFrame().showFrame(chromosome,importer);
 
         System.out.println(System.currentTimeMillis()-start);
     }
-
 }
