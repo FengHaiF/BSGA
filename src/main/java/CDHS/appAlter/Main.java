@@ -5,6 +5,7 @@ import CDHS.MyGA.GeneEngine;
 import CDHS.persistence.Importer;
 import CDHS.showframe.ShowFrame;
 
+import java.io.IOException;
 import java.util.List;
 
 public class Main {
@@ -15,7 +16,11 @@ public class Main {
         //先构建遗传算法的初始解
 
         GeneEngine geneEngine = new GeneEngine(importer);
-        geneEngine.engineBegin();
+        try {
+            geneEngine.engineBegin();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         List<Chromosome> population = geneEngine.population;
 

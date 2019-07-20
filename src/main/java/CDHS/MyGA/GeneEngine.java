@@ -4,6 +4,9 @@ import CDHS.appAlter.Setting;
 import CDHS.domain.Seat;
 import CDHS.persistence.Importer;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 @SuppressWarnings("all")
@@ -128,7 +131,12 @@ public class GeneEngine {
      * Gene Engine
      */
     //入口
-    public void engineBegin(){
+    public void engineBegin() throws IOException {
+        File file = new File("E:\\cdhsData\\data.txt");
+        FileWriter fw = null;
+        fw = new FileWriter(file);
+        file.createNewFile();
+
         //初始化种群
         initPopulation();
         for (int i = 0; i < Setting.LIMIT_GENERATION; i++) {
@@ -140,8 +148,14 @@ public class GeneEngine {
                 crossoverAndMutation();
             }
             dieOut();
+
+            double fitness = population.get(0).getFitness();
+            fw.write((i+1)+","+fitness+"\r\n");
+            fw.flush();
             System.out.println(population);
         }
+
+        fw.close();
     }
 
     //初始化种群

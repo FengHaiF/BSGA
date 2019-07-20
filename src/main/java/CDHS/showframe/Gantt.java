@@ -9,7 +9,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.AffineTransform;
-import java.util.List;
 import java.util.Map;
 
 
@@ -63,35 +62,46 @@ public class Gantt extends JPanel {
 
         for (int i = 0; i < result.size(); i++) {
             Operation operation = result.get(i);
+//            System.out.println(operation);
             String name = getZWName(operation);
             double time = operation.getDuration();
             int x = (int) (lt.x+operation.getStart()*wZW);
             int y = (int) (lt.y +operation.getPlaneId() * (hJZJ + 10) + hJZJ / 2 + (hJZJ + 10) / 2);
             int width = (int) (operation.getDuration()*wZW);
+            int _width = (int) (operation.getWaitOilStation()*wZW);
             int heigth = (int) hJZJ;
             double trantime=operation.getDistTime();
             int width_tran = (int) (trantime*wZW);
 
             //画gantt图
-            g.drawRect(x, y-heigth, width, heigth);
+            switch (operation.getOperationType()){
+                case 1:
+                    g.setColor(new Color(236,239,1));
+                    break;
+                case 2:
+                    g.setColor(new Color(30,171,3));
+            }
+            g.fillRect(x+_width, y-heigth, width-_width, heigth);
             //  name+=":"+oex.o.get_duration();
+            g.setColor(Color.black);
             int strx = x + width / 2 - getStringWidth(name, g.getFont()) / 2;
             int stry = y - heigth / 2 + getStringHeight(name, g.getFont()) / 2;
-            if (operation.getOperationType()==2)
+            if (operation.getOperationType()==3)
                 g.drawString(name,lt.x + (int)solution.getMakespan()*wZW+15, stry);
-            else
-                g.drawString(name, strx, stry);
+            else if (operation.getOperationType() != 0)
+                g.drawString(name, strx+_width/2, stry);
 
             //粉色为等待
-            if(operation.getPreviousOperation()==null&&operation.getStart()!=0&&operation.getOperationType()<=Setting.NUM_OF_MATAINANCE) {
-                int waitWidth = (int) (operation.getStart() * wZW);
-                g.setColor(Color.pink);
-                g.fillRect(lt.x , y-heigth, waitWidth, heigth);
-            }
             if (operation.getWaitTime()!=0){
                 int waitWidth = (int) (operation.getWaitTime() * wZW);
                 g.setColor(Color.pink);
                 g.fillRect(x + width, y-heigth, waitWidth, heigth+1);
+            }
+            if (operation.getWaitOilStation()!=0){
+                g.setColor(Color.pink);
+                g.fillRect(x, y-heigth, _width, heigth+1);
+//                g.setColor(Color.BLACK);
+//                g.drawString(name, strx+_width/2, stry);
             }
 
             g.setColor(Color.lightGray);

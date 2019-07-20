@@ -6,6 +6,7 @@ import CDHS.domain.Operation;
 import CDHS.domain.Seat;
 import CDHS.persistence.Importer;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,8 +25,6 @@ public class Solution {
     private Map<String,Double> stationEndTimeMap = new HashMap<>();
     private Map<Long,List<Operation>> seatOperationMap = new HashMap<>();
 
-
-    private double totalDist;
     private double makespan;
 
     public Solution(Chromosome chromosome,Importer importer) {
@@ -45,6 +44,14 @@ public class Solution {
     }
 
     private void chromosomeToOperation(){
+        for (int i = 0; i < importer.getNumOfPlane(); i++) {
+            Seat seatLast = new Seat();
+            seatLast.setSeatId(Setting.INITIAL_TABLE[i]);
+
+            Operation operation = new Operation(i, i, seatLast, 0,0,0,0);
+            operationList.add(operation);
+            operationMap.put(operation.getOperationId(),operation);
+        }
         int z = 0;
         for (int i = 0; i < geneList.size()-Setting.NUM_OF_NEXT; i++) {
             for (int j = 0; j < geneList.get(i).size(); j++) {
@@ -56,10 +63,10 @@ public class Solution {
                 Operation operation = new Operation();
                 if (i==0){
                     Seat seat = importer.getOilSeatMap().get(gene);
-                    operation.setOperation(z, j, seat, importer.getOilDuration(j,seat.getStationPosition()), 0, 0, i);
+                    operation.setOperation(z+importer.getNumOfPlane(), j, seat, importer.getOilDuration(j,seat.getStationPosition()), 0, 0, i+1);
                 }if (i==1){
                     Seat seat = importer.getDySeatMap().get(gene);
-                    operation.setOperation(z, j, seat, importer.getDyDuration(), 0, 0, i);
+                    operation.setOperation(z+importer.getNumOfPlane(), j, seat, importer.getDyDuration(), 0, 0, i+1);
                 }
 //                if (i==geneList.size()-Setting.NUM_OF_NEXT){
 //                    Seat seat = importer.getOrderMap().get(gene);
@@ -68,7 +75,7 @@ public class Solution {
 //                }
                 operationList.add(operation);
                 int order = orderGenes.get(z);
-                operationMap.put(order,operation);
+                operationMap.put(order+importer.getNumOfPlane(),operation);
                 z++;
             }
         }
@@ -79,7 +86,7 @@ public class Solution {
 //            seatLast.setSeatId(Setting.TAKEOFF_TABLE[i]);
             seatLast.setSeatId(chromosome.getBfGenes().get(i));
 
-            Operation operation = new Operation(size+i, i, seatLast, 0,0,0,geneList.size()-Setting.NUM_OF_NEXT);
+            Operation operation = new Operation(size+i, i, seatLast, 0,0,0,geneList.size()-Setting.NUM_OF_NEXT+1);
             operationList.add(operation);
             operationMap.put(operation.getOperationId(),operation);
             operationPlaneMap.put((long) i, new ArrayList<>());
@@ -121,7 +128,6 @@ public class Solution {
         chromosomeToOperation();
 
         makespan = 0;
-        totalDist = 0;
 
         List<List<Double>> distTable = Setting.DIST_TABLE;
 
@@ -129,40 +135,36 @@ public class Solution {
         double startTime;
 
         for (int i = 0; i < operationMap.size(); i++) {
-
             Operation operation = operationMap.get(i);
 
-            double lastOperationTime = operation.getStart();
-
-            //设置第一个的previous为自己
+            double lastOperationTime = 0;
             if (operation.getPreviousOperation() == null){
-//                previous = operation.getSeatId();
                 previous = Setting.INITIAL_TABLE[(int)operation.getPlaneId()];
             }else {
                 lastOperationTime = operation.getPreviousOperation().getEnd();
                 previous = operation.getPreviousOperation().getSeatId();
             }
 
-            //设置拖行时间
             operation.setPreviousSeatId(previous);
             operation.setDistTime((distTable.get((int)previous).get((int)operation.getSeatId())/Setting.QYC_SPEED));
-            if (operation.getDistTime()!=0)
-                operation.setDistTime(operation.getDistTime()+2);
 
-            //设置开始时间，根据前一个operation的时间、站位结束时间、管道占用结束时间来确定
             startTime = Math.max(lastOperationTime+operation.getDistTime(), seatEndTimeMap.get(operation.getSeatId()));
-            if (operation.getOperationType() == 0)
-                startTime = Math.max(startTime, stationEndTimeMap.get(operation.getStationPosition()));
-
+            if (operation.getOperationType() == 1) {//等油站
+                Double stationFreeTime = stationEndTimeMap.get(operation.getStationPosition());
+                if (startTime < stationFreeTime){
+                    operation.setDuration(operation.getDuration()+stationFreeTime-startTime);
+                    operation.setWaitOilStation(stationFreeTime-startTime);
+                }
+//                startTime = Math.max(startTime, stationEndTimeMap.get(operation.getStationPosition()));
+            }
             operation.setStart(startTime);
 
-            //设置前一个等待，并更新站位时间
-            if(startTime - operation.getDistTime() - lastOperationTime != 0) {
+            if(startTime - operation.getDistTime() - lastOperationTime > 0) {
                 if(operation.getPreviousOperation()!=null){
                     Operation previousOperation = operation.getPreviousOperation();
                     double endRefresh = startTime - operation.getDistTime();
-                    previousOperation.setWaitTime(endRefresh-lastOperationTime);
-                    previousOperation.setEnd(endRefresh);
+                    previousOperation.setWaitTime(startTime - operation.getDistTime()-lastOperationTime);
+
                     seatEndTimeMap.put(previousOperation.getSeatId(),endRefresh);
                 }
             }
@@ -172,19 +174,19 @@ public class Solution {
             operation.setEnd(newEndTime);
 
             //更新
-            if (operation.getOperationType()==0)
+            if (operation.getOperationType()==1)
                 stationEndTimeMap.replace(operation.getStationPosition(),newEndTime);
-            totalDist += operation.getDistTime();
             //设置最后站位已经占用
             if (operation.getNextOperation()==null){
                 seatEndTimeMap.replace(operation.getSeatId(),5000.0);
             }else {
                 seatEndTimeMap.replace(operation.getSeatId(), newEndTime);
             }
+            seatOperationMap.get(operation.getSeatId()).add(operation);
             makespan = Math.max(makespan,newEndTime);
 
-            seatOperationMap.get(operation.getSeatId()).add(operation);
         }
+
 
         //最后加上时间约束，不满足约束直接去除解
         if (isTimeConflict(importer))
@@ -202,7 +204,8 @@ public class Solution {
                 Operation operation = seatOperationMap.get(seatId).get(i);
                 for (int j = i+1; j < size; j++) {
                     Operation otherOperation = seatOperationMap.get(seatId).get(j);
-                    if (!(operation.getStart() >= otherOperation.getEnd()||operation.getEnd() <= otherOperation.getStart()))
+                    if (!(operation.getStart() >= otherOperation.getEnd()+otherOperation.getWaitTime()
+                            ||operation.getEnd()+operation.getWaitTime() <= otherOperation.getStart()))
                         return true;
                 }
             }

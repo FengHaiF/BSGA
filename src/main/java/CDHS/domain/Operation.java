@@ -10,6 +10,7 @@ public class Operation {
     private double start;
     private double end;    //开始结束时间
     private double waitTime;
+    private double waitOilStation;
     private double coldTime;
     private int operationType;
     private long previousSeatId;
@@ -30,6 +31,7 @@ public class Operation {
         this.end = end;
         this.operationType = operationType;
         this.waitTime = 0;
+        this.waitOilStation = 0;
         this.coldTime = 0;
     }
 
@@ -42,7 +44,16 @@ public class Operation {
         this.end = end;
         this.operationType = operationType;
         this.waitTime = 0;
+        this.waitOilStation = 0;
         this.coldTime = 0;
+    }
+
+    public double getWaitOilStation() {
+        return waitOilStation;
+    }
+
+    public void setWaitOilStation(double waitOilStation) {
+        this.waitOilStation = waitOilStation;
     }
 
     public String getStationPosition(){
@@ -182,6 +193,7 @@ public class Operation {
                 ", previousSeatId=" + previousSeatId +
                 ", distTime=" + distTime +
                 ", waitTime=" + waitTime +
+                ", waitOilStation=" + waitOilStation +
                 ", coldTime=" + coldTime +
                 '}'+'\n';
     }
