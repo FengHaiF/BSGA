@@ -47,8 +47,8 @@ public class Gantt extends JPanel {
     private void init() {
         this.starttime = 0 * 60;
         this.endtime = 4 * 60;
-        this.blank = 20;
-        blank = 20;
+        this.blank = 5;
+        blank = 5;
         hJZJ = 20f;
         wZW = 10f;
         lt = new Point(100, 70);
@@ -61,8 +61,8 @@ public class Gantt extends JPanel {
         Map<Integer, Operation> result = solution.getOperationMap();
 
         for (int i = 0; i < result.size(); i++) {
-            Operation operation = result.get(i);
 //            System.out.println(operation);
+            Operation operation = result.get(i);
             String name = getZWName(operation);
             double time = operation.getDuration();
             int x = (int) (lt.x+operation.getStart()*wZW);
@@ -76,17 +76,17 @@ public class Gantt extends JPanel {
             //画gantt图
             switch (operation.getOperationType()){
                 case 1:
-                    g.setColor(new Color(236,239,1));
+                    g.setColor(new Color(230,190,3));
                     break;
                 case 2:
-                    g.setColor(new Color(30,171,3));
+                    g.setColor(new Color(104,147,36));
             }
             g.fillRect(x+_width, y-heigth, width-_width, heigth);
             //  name+=":"+oex.o.get_duration();
             g.setColor(Color.black);
             int strx = x + width / 2 - getStringWidth(name, g.getFont()) / 2;
             int stry = y - heigth / 2 + getStringHeight(name, g.getFont()) / 2;
-            if (operation.getOperationType()==3)
+            if (operation.getOperationType() == 3)
                 g.drawString(name,lt.x + (int)solution.getMakespan()*wZW+15, stry);
             else if (operation.getOperationType() != 0)
                 g.drawString(name, strx+_width/2, stry);
@@ -94,19 +94,20 @@ public class Gantt extends JPanel {
             //粉色为等待
             if (operation.getWaitTime()!=0){
                 int waitWidth = (int) (operation.getWaitTime() * wZW);
-                g.setColor(Color.pink);
-                g.fillRect(x + width, y-heigth, waitWidth, heigth+1);
+                g.setColor(new Color(243,195,227));
+                g.fillRect(x + width, y-heigth, waitWidth, heigth);
             }
             if (operation.getWaitOilStation()!=0){
-                g.setColor(Color.pink);
-                g.fillRect(x, y-heigth, _width, heigth+1);
-//                g.setColor(Color.BLACK);
-//                g.drawString(name, strx+_width/2, stry);
+                g.setColor(new Color(243,195,227));
+                g.fillRect(x, y-heigth, _width, heigth);
             }
 
             g.setColor(Color.lightGray);
-            g.fillRect(x-width_tran , y-heigth, width_tran, heigth+1);
+            g.fillRect(x-width_tran , y-heigth, width_tran, heigth);
             g.setColor(Color.BLACK);
+            int qycId = operation.getQycId();
+            if (qycId != -1)
+                g.drawString("Q"+qycId,x-width_tran / 2 - getStringWidth("Q"+ qycId, g.getFont()) / 2, stry);
             //距离显示
 //            g.drawString(String.valueOf(trantime),x, y-heigth);
         }
@@ -114,7 +115,7 @@ public class Gantt extends JPanel {
         int x = (int)(lt.x + solution.getMakespan()*wZW);
 //        System.out.println("Print" + solution.getMakespan());
         g.drawLine(x, lb.y,x, lt.y);
-        g.drawString(String.format("%.2f",solution.getMakespan()), x, lb.y + 15);
+        g.drawString(String.format("%.2f",solution.getMakespan()), x - 15, lt.y - 5);
     }
 
 //    public void drawItemBF(Graphics2D g) {

@@ -24,6 +24,8 @@ public class Solution {
     private Map<Long,Double> seatEndTimeMap = new HashMap<>();
     private Map<String,Double> stationEndTimeMap = new HashMap<>();
     private Map<Long,List<Operation>> seatOperationMap = new HashMap<>();
+    private Map<Integer,Double> qycEndTimeMap = new HashMap<>();
+    private Map<Integer,Boolean> qycFlagMap = new HashMap<>();
 
     private double makespan;
 
@@ -122,6 +124,10 @@ public class Solution {
                 }
             }
         }
+        for (int i = 0; i < Setting.QYC_NUM; i++) {
+            qycEndTimeMap.put(i,0.0);
+            qycFlagMap.put(i,true);
+        }
     }
 
     public void calculateMakespan(){
@@ -148,6 +154,32 @@ public class Solution {
             operation.setPreviousSeatId(previous);
             operation.setDistTime((distTable.get((int)previous).get((int)operation.getSeatId())/Setting.QYC_SPEED));
 
+            double qycEndTime = qycEndTimeMap.get(0);
+            if (operation.getDistTime() != 0){
+                int qycNum = 0;
+                for (int j = 1; j < qycEndTimeMap.size(); j++) {
+                    if(qycEndTime > qycEndTimeMap.get(j)) {
+                        qycEndTime = qycEndTimeMap.get(j);
+                        qycNum = j;
+                    }
+                }
+                if (lastOperationTime < qycEndTime) {
+                    lastOperationTime = qycEndTime;
+                    if (operation.getPreviousOperation() == null){
+                        operation.setDuration(qycEndTime);
+                    }else {
+                        Operation previousOperation = operation.getPreviousOperation();
+                        if (previousOperation.getEnd()+previousOperation.getWaitTime() < qycEndTime) {
+                            previousOperation.setWaitTime(qycEndTime - previousOperation.getEnd());
+                            if (qycEndTime > seatEndTimeMap.get(previousOperation.getSeatId()))
+                                seatEndTimeMap.put(previousOperation.getSeatId(),qycEndTime);
+                        }
+                    }
+                }
+                operation.setQycId(qycNum);
+                qycEndTimeMap.replace(qycNum,lastOperationTime+operation.getDistTime());
+            }
+
             startTime = Math.max(lastOperationTime+operation.getDistTime(), seatEndTimeMap.get(operation.getSeatId()));
             if (operation.getOperationType() == 1) {//等油站
                 Double stationFreeTime = stationEndTimeMap.get(operation.getStationPosition());
@@ -155,7 +187,6 @@ public class Solution {
                     operation.setDuration(operation.getDuration()+stationFreeTime-startTime);
                     operation.setWaitOilStation(stationFreeTime-startTime);
                 }
-//                startTime = Math.max(startTime, stationEndTimeMap.get(operation.getStationPosition()));
             }
             operation.setStart(startTime);
 
@@ -163,9 +194,10 @@ public class Solution {
                 if(operation.getPreviousOperation()!=null){
                     Operation previousOperation = operation.getPreviousOperation();
                     double endRefresh = startTime - operation.getDistTime();
-                    previousOperation.setWaitTime(startTime - operation.getDistTime()-lastOperationTime);
 
-                    seatEndTimeMap.put(previousOperation.getSeatId(),endRefresh);
+                    previousOperation.setWaitTime(previousOperation.getWaitTime() + startTime - operation.getDistTime()-lastOperationTime);
+                    if (endRefresh > seatEndTimeMap.get(previousOperation.getSeatId()))
+                        seatEndTimeMap.put(previousOperation.getSeatId(),endRefresh);
                 }
             }
 
@@ -189,14 +221,17 @@ public class Solution {
 
 
         //最后加上时间约束，不满足约束直接去除解
-        if (isTimeConflict(importer))
-            makespan += 5000;
-
+        int timeConflict = isTimeConflict(importer);
+        if (timeConflict != 0) {
+            makespan = 0;
+            makespan += 500 * timeConflict;
+        }
         chromosome.setFitness(makespan);
     }
 
     //筛选时间冲突的解
-    private boolean isTimeConflict(Importer importer){
+    private int isTimeConflict(Importer importer){
+        int conflictNum = 0;
         for (Seat seat : importer.getSeatList()){
             long seatId = seat.getSeatId();
             int size = seatOperationMap.get(seatId).size();
@@ -206,11 +241,11 @@ public class Solution {
                     Operation otherOperation = seatOperationMap.get(seatId).get(j);
                     if (!(operation.getStart() >= otherOperation.getEnd()+otherOperation.getWaitTime()
                             ||operation.getEnd()+operation.getWaitTime() <= otherOperation.getStart()))
-                        return true;
+                        conflictNum++;
                 }
             }
         }
-        return false;
+        return conflictNum;
     }
 
 }

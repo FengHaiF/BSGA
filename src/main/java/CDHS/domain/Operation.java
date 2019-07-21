@@ -13,6 +13,7 @@ public class Operation {
     private double waitOilStation;
     private double coldTime;
     private int operationType;
+    private int qycId = -1;
     private long previousSeatId;
     private long nextSeatId;
     private double distTime;
@@ -46,6 +47,14 @@ public class Operation {
         this.waitTime = 0;
         this.waitOilStation = 0;
         this.coldTime = 0;
+    }
+
+    public int getQycId() {
+        return qycId;
+    }
+
+    public void setQycId(int qycId) {
+        this.qycId = qycId;
     }
 
     public double getWaitOilStation() {

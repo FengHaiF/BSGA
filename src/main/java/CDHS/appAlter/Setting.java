@@ -19,8 +19,9 @@ public class Setting {
     public static int NUM_OF_MATAINANCE;
     public static int NUM_OF_NEXT;
     public static int POPULATION_SIZE;
-    public static double QYC_SPEED = 120;
+    public static double QYC_SPEED = 100;
     public static double MUTATION_RATE = 0.1;
+    public static int QYC_NUM = 4;
     public static double ZB_DURATION = 5;
     public static double COLD_DURATION = 2;
     public static int BF_NUM = 2;
@@ -47,7 +48,7 @@ public class Setting {
             case SET_MODE_01:
                 setDistTable(DIST_TABLE,DIST_PATH);
                 POPULATION_SIZE = 20;
-                LIMIT_GENERATION  = 30000;
+                LIMIT_GENERATION  = 10000;
                 NUM_OF_MATAINANCE = 2;
                 NUM_OF_NEXT = 1;
                 DATE = new Date();
