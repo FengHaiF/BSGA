@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="059adca4-838d-4422-b640-df42e167d4cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CDHS/domain/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/domain/Operation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CDHS/showframe/Gantt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CDHS/showframe/Gantt.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
+            <state relative-caret-position="294">
               <caret line="74" column="28" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -48,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="179" selection-start-line="179" selection-end-line="179" />
+            <state relative-caret-position="314">
+              <caret line="190" column="13" lean-forward="true" selection-start-line="190" selection-start-column="13" selection-end-line="190" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4158">
-              <caret line="240" column="54" selection-start-line="240" selection-start-column="54" selection-end-line="240" selection-end-column="54" />
+            <state relative-caret-position="417">
+              <caret line="403" lean-forward="true" selection-start-line="403" selection-end-line="403" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#rouletteInit#0;class#GeneEngine#0" />
@@ -72,7 +69,6 @@
                 <element signature="method#getAllele#1;class#GeneEngine#0" />
                 <element signature="method#getNotRepeatSeatList#0;class#GeneEngine#0" />
                 <element signature="method#sortPopulation#0;class#GeneEngine#0" />
-                <element signature="method#dieOut#0;class#GeneEngine#0" />
                 <element signature="method#mutationExchange#0;class#GeneEngine#0" />
                 <element signature="method#crossoverNotRepeat#0;class#GeneEngine#0" />
                 <element signature="method#crossoverSinglePoint#0;class#GeneEngine#0" />
@@ -97,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="117" column="73" selection-start-line="117" selection-start-column="73" selection-end-line="117" selection-end-column="73" />
+            <state relative-caret-position="123">
+              <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,7 +123,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmess.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2916">
+            <state relative-caret-position="528">
               <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
             </state>
           </provider>
@@ -136,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="527">
+              <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -225,10 +221,10 @@
         <option value="$PROJECT_DIR$/src/main/java/CDHS/persistence/Importer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data/seats.xml" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data/initmess.json" />
-        <option value="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Solution.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/domain/Operation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Solution.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java" />
         <option value="$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java" />
       </list>
@@ -280,8 +276,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-68" />
-    <option name="y" value="91" />
+    <option name="x" value="66" />
+    <option name="y" value="34" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
@@ -291,7 +287,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -413,7 +409,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,7 +549,8 @@
       <workItem from="1563500971636" duration="47899000" />
       <workItem from="1563621365780" duration="236000" />
       <workItem from="1563673270475" duration="17312000" />
-      <workItem from="1563715960651" duration="2232000" />
+      <workItem from="1563715960651" duration="2330000" />
+      <workItem from="1563758788054" duration="12243000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;0529更改&quot;">
       <created>1559130974243</created>
@@ -632,11 +629,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563621423490</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="&quot;牵引车约束加上，算法改进梯度，调整变异概率&quot;">
+      <created>1563718233393</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563718233394</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562334000" />
+    <option name="totallyTimeSpent" value="574675000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -651,7 +655,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28856042" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17030849" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -661,13 +665,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.180593" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4703504" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.25067386" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6132075" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36927223" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.16442049" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.50269544" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.53638816" />
@@ -784,7 +788,8 @@
     <MESSAGE value="&quot;0704遗传算法框架搭完&quot;" />
     <MESSAGE value="&quot;0704注释完&quot;" />
     <MESSAGE value="&quot;没加牵引车约束&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;没加牵引车约束&quot;" />
+    <MESSAGE value="&quot;牵引车约束加上，算法改进梯度，调整变异概率&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;牵引车约束加上，算法改进梯度，调整变异概率&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -803,9 +808,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Solution.java</url>
-          <line>228</line>
+          <line>188</line>
           <properties />
-          <option name="timeStamp" value="172" />
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -815,6 +820,7 @@
         <watch expression="seatOperationMap" language="JAVA" />
         <watch expression="seatEndTimeMap" language="JAVA" />
         <watch expression="operationMap" language="JAVA" />
+        <watch expression="((java.util.ArrayList)((Solution)this).operationList).get(9)" custom="CDHS.appAlter.Solution,java.util.ArrayList" />
       </configuration>
     </watches-manager>
   </component>
@@ -1078,43 +1084,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="method#initGeneList#0;class#Chromosome#0" />
-            <element signature="method#initGenes#0;class#Chromosome#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4158">
-          <caret line="240" column="54" selection-start-line="240" selection-start-column="54" selection-end-line="240" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#rouletteInit#0;class#GeneEngine#0" />
-            <element signature="method#roulette#0;class#GeneEngine#0" />
-            <element signature="method#roulette#1;class#GeneEngine#0" />
-            <element signature="method#isTheRepeatGene#0;class#GeneEngine#0" />
-            <element signature="method#getAllele#0;class#GeneEngine#0" />
-            <element signature="method#getAllele#1;class#GeneEngine#0" />
-            <element signature="method#getNotRepeatSeatList#0;class#GeneEngine#0" />
-            <element signature="method#sortPopulation#0;class#GeneEngine#0" />
-            <element signature="method#dieOut#0;class#GeneEngine#0" />
-            <element signature="method#mutationExchange#0;class#GeneEngine#0" />
-            <element signature="method#crossoverNotRepeat#0;class#GeneEngine#0" />
-            <element signature="method#crossoverSinglePoint#0;class#GeneEngine#0" />
-            <element signature="method#crossoverDoublePoint#0;class#GeneEngine#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/ShowFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -1139,27 +1108,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmess.json">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/Chromosome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2916">
-          <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
+        <state relative-caret-position="294">
+          <caret line="74" column="28" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="method#initGeneList#0;class#Chromosome#0" />
+            <element signature="method#initGenes#0;class#Chromosome#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        <state relative-caret-position="314">
+          <caret line="190" column="13" lean-forward="true" selection-start-line="190" selection-start-column="13" selection-end-line="190" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/MyGA/GeneEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="403" lean-forward="true" selection-start-line="403" selection-end-line="403" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#rouletteInit#0;class#GeneEngine#0" />
+            <element signature="method#roulette#0;class#GeneEngine#0" />
+            <element signature="method#roulette#1;class#GeneEngine#0" />
+            <element signature="method#isTheRepeatGene#0;class#GeneEngine#0" />
+            <element signature="method#getAllele#0;class#GeneEngine#0" />
+            <element signature="method#getAllele#1;class#GeneEngine#0" />
+            <element signature="method#getNotRepeatSeatList#0;class#GeneEngine#0" />
+            <element signature="method#sortPopulation#0;class#GeneEngine#0" />
+            <element signature="method#mutationExchange#0;class#GeneEngine#0" />
+            <element signature="method#crossoverNotRepeat#0;class#GeneEngine#0" />
+            <element signature="method#crossoverSinglePoint#0;class#GeneEngine#0" />
+            <element signature="method#crossoverDoublePoint#0;class#GeneEngine#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/initmess.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/appAlter/Setting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        <state relative-caret-position="527">
+          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1168,8 +1173,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CDHS/showframe/Gantt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="117" column="73" selection-start-line="117" selection-start-column="73" selection-end-line="117" selection-end-column="73" />
+        <state relative-caret-position="123">
+          <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

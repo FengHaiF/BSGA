@@ -47,8 +47,8 @@ public class Setting {
         switch (mode){
             case SET_MODE_01:
                 setDistTable(DIST_TABLE,DIST_PATH);
-                POPULATION_SIZE = 20;
-                LIMIT_GENERATION  = 10000;
+                POPULATION_SIZE = 50;
+                LIMIT_GENERATION  = 15000;
                 NUM_OF_MATAINANCE = 2;
                 NUM_OF_NEXT = 1;
                 DATE = new Date();

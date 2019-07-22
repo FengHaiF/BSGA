@@ -50,7 +50,7 @@ public class Gantt extends JPanel {
         this.blank = 5;
         blank = 5;
         hJZJ = 20f;
-        wZW = 10f;
+        wZW = 15f;
         lt = new Point(100, 70);
         lb = new Point(lt.x, (int) (lt.y + numOfJZJ * (hJZJ + 10)));
         rb = new Point((int) (lb.x + (endtime - starttime) * wZW), lb.y);
@@ -61,8 +61,8 @@ public class Gantt extends JPanel {
         Map<Integer, Operation> result = solution.getOperationMap();
 
         for (int i = 0; i < result.size(); i++) {
-//            System.out.println(operation);
             Operation operation = result.get(i);
+//            System.out.println(operation);
             String name = getZWName(operation);
             double time = operation.getDuration();
             int x = (int) (lt.x+operation.getStart()*wZW);

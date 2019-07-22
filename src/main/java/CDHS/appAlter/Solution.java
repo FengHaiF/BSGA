@@ -155,8 +155,9 @@ public class Solution {
             operation.setDistTime((distTable.get((int)previous).get((int)operation.getSeatId())/Setting.QYC_SPEED));
 
             double qycEndTime = qycEndTimeMap.get(0);
+            int qycNum = 0;
             if (operation.getDistTime() != 0){
-                int qycNum = 0;
+
                 for (int j = 1; j < qycEndTimeMap.size(); j++) {
                     if(qycEndTime > qycEndTimeMap.get(j)) {
                         qycEndTime = qycEndTimeMap.get(j);
@@ -165,15 +166,11 @@ public class Solution {
                 }
                 if (lastOperationTime < qycEndTime) {
                     lastOperationTime = qycEndTime;
-                    if (operation.getPreviousOperation() == null){
-                        operation.setDuration(qycEndTime);
-                    }else {
-                        Operation previousOperation = operation.getPreviousOperation();
-                        if (previousOperation.getEnd()+previousOperation.getWaitTime() < qycEndTime) {
-                            previousOperation.setWaitTime(qycEndTime - previousOperation.getEnd());
-                            if (qycEndTime > seatEndTimeMap.get(previousOperation.getSeatId()))
-                                seatEndTimeMap.put(previousOperation.getSeatId(),qycEndTime);
-                        }
+                    Operation previousOperation = operation.getPreviousOperation();
+                    if (previousOperation.getEnd()+previousOperation.getWaitTime() < qycEndTime) {
+                        previousOperation.setWaitTime(qycEndTime - previousOperation.getEnd());
+                        if (qycEndTime > seatEndTimeMap.get(previousOperation.getSeatId()))
+                            seatEndTimeMap.put(previousOperation.getSeatId(),qycEndTime);
                     }
                 }
                 operation.setQycId(qycNum);
@@ -189,13 +186,16 @@ public class Solution {
                 }
             }
             operation.setStart(startTime);
-
+            if (startTime > qycEndTimeMap.get(qycNum)) {
+                qycEndTimeMap.replace(qycNum, startTime);
+            }
             if(startTime - operation.getDistTime() - lastOperationTime > 0) {
                 if(operation.getPreviousOperation()!=null){
                     Operation previousOperation = operation.getPreviousOperation();
                     double endRefresh = startTime - operation.getDistTime();
 
                     previousOperation.setWaitTime(previousOperation.getWaitTime() + startTime - operation.getDistTime()-lastOperationTime);
+
                     if (endRefresh > seatEndTimeMap.get(previousOperation.getSeatId()))
                         seatEndTimeMap.put(previousOperation.getSeatId(),endRefresh);
                 }
