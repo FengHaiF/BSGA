@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.Dom4JDriver;
-import org.springframework.core.annotation.Order;
+//import org.springframework.core.annotation.Order;
 
 
 public class XmlIO<T> {

@@ -10,6 +10,8 @@ import java.util.List;
 
 public class Main {
     static Importer importer = new Importer();
+    private Solution solution;
+    //private double makespan;
 
     public static void main(String[] args) {
         long start= System.currentTimeMillis();
@@ -29,5 +31,10 @@ public class Main {
         new ShowFrame().showFrame(chromosome,importer);
 
         System.out.println(System.currentTimeMillis()-start);
+
+
+
     }
+
+
 }

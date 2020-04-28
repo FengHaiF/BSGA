@@ -132,7 +132,7 @@ public class GeneEngine {
      */
     //入口
     public void engineBegin() throws IOException {
-        File file = new File("E:\\cdhsData\\data.txt");
+        File file = new File("./data.txt");
         FileWriter fw = null;
         fw = new FileWriter(file);
         file.createNewFile();
@@ -235,10 +235,10 @@ public class GeneEngine {
         //两个子代的变异
         mutation(Setting.MUTATION_RATE,chromosomeC1);
         mutation(Setting.MUTATION_RATE,chromosomeC2);
-        mutationNotRepeat(chromosomeC1.getBfGenes(),0.003);
-        mutationNotRepeat(chromosomeC2.getBfGenes(),0.003);
-        mutationExchange(chromosomeC1.getOrderGenes(),0.003);
-        mutationExchange(chromosomeC2.getOrderGenes(),0.003);
+        mutationNotRepeat(chromosomeC1.getBfGenes(),0.008);
+        mutationNotRepeat(chromosomeC2.getBfGenes(),0.008);
+        mutationExchange(chromosomeC1.getOrderGenes(),0.008);
+        mutationExchange(chromosomeC2.getOrderGenes(),0.008);
         //将布放站位交叉变异的值放入，并初始化
 //        chromosomeC1.getGeneList().get(Setting.BF_NUM).clear();
 //        chromosomeC1.getGeneList().get(Setting.BF_NUM).addAll(C1);

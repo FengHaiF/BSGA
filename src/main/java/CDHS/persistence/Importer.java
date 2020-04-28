@@ -122,8 +122,9 @@ public class Importer {
             }
         }
 
-        for (OilStation oilStation : oilStationList)
+        for (OilStation oilStation : oilStationList) {
             oilStationMap.put(oilStation.getPosition(),oilStation);
+        }
 
         for (Seat seat : seatList) {
             if (seat.isOilFlag()){
@@ -159,8 +160,9 @@ public class Importer {
             }
         }
 
-        for (PlaneJZJ planeJZJ : planeList)
+        for (PlaneJZJ planeJZJ : planeList) {
             planeJZJMap.put(planeJZJ.getPlaneId(),planeJZJ);
+        }
         for (int i = 0; i < oilSeatList.size(); i++) {
             Seat seat = oilSeatList.get(i);
             seat.set_id(i);

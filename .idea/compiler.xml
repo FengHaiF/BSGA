@@ -6,15 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BSGA" />
         <module name="GA_CDHS" />
+        <module name="BSGA" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="BSGA" options="-parameters" />
-      <module name="GA_CDHS" options="-parameters" />
+      <module name="BSGA" options="" />
     </option>
   </component>
 </project>

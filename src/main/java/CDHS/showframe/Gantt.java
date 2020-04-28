@@ -5,11 +5,14 @@ import CDHS.appAlter.Solution;
 import CDHS.domain.Operation;
 import CDHS.persistence.Importer;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.AffineTransform;
 import java.util.Map;
+
+
 
 
 @SuppressWarnings("all")
@@ -27,11 +30,13 @@ public class Gantt extends JPanel {
     private Point rt;
     private Point rb;
 
+
     public Gantt(Solution solution, Importer importer) {
         this.solution = solution;
         numOfJZJ = importer.getNumOfPlane();
 //        numOfZW = importer.ge;
         init();
+        //jsonOutput(solution);
     }
 
     @Override
@@ -50,7 +55,7 @@ public class Gantt extends JPanel {
         this.blank = 5;
         blank = 5;
         hJZJ = 20f;
-        wZW = 15f;
+        wZW = 12f;
         lt = new Point(100, 70);
         lb = new Point(lt.x, (int) (lt.y + numOfJZJ * (hJZJ + 10)));
         rb = new Point((int) (lb.x + (endtime - starttime) * wZW), lb.y);
@@ -118,53 +123,6 @@ public class Gantt extends JPanel {
         g.drawString(String.format("%.2f",solution.getMakespan()), x - 15, lt.y - 5);
     }
 
-//    public void drawItemBF(Graphics2D g) {
-//        List<Operation> bfOperationList = solution.getBfOperationList();
-//        for (Operation operation : bfOperationList) {
-//            String name = getZWName(operation);
-//            double time = operation.getDuration();
-//            int x = (int) (lt.x+operation.getStart()*wZW);
-//            int y = (int) (lt.y +operation.getPlaneId() * (hJZJ + 10) + hJZJ / 2 + (hJZJ + 10) / 2);
-//            int width = (int) (operation.getDuration()*wZW);
-//            int heigth = (int) hJZJ;
-//            double trantime = operation.getDistTime();
-//            int width_tran = (int)(trantime*wZW);
-//
-//            //画gantt图
-//            g.drawRect(x, y-heigth, width, heigth);
-//            //  name+=":"+oex.o.get_duration();
-//            int strx = x + width / 2 - getStringWidth(name, g.getFont()) / 2;
-//            int stry = y - heigth / 2 + getStringHeight(name, g.getFont()) / 2;
-//            if (operation.getOperationType()==2)
-//                g.drawString(name,lt.x + (int)solution.getMakespan()*wZW+15, stry);
-//            else
-//                g.drawString(name, strx, stry);
-//
-//            //粉色为等待
-//            if(operation.getPreviousOperation()==null&&operation.getStart()!=0&&operation.getOperationType()<=Setting.NUM_OF_MATAINANCE) {
-//                int waitWidth = (int) (operation.getStart() * wZW);
-//                g.setColor(Color.pink);
-//                g.fillRect(lt.x , y-heigth, waitWidth, heigth);
-//            }
-//            if (operation.getWaitTime()!=0){
-//                int waitWidth = (int) (operation.getWaitTime() * wZW);
-//                g.setColor(Color.pink);
-//                g.fillRect(x + width, y-heigth, waitWidth, heigth+1);
-//            }
-//            if (operation.getOperationType()==4){
-//                int waitWidth = (int) (operation.getColdTime() * wZW);
-//                g.setColor(Color.CYAN);
-//                g.fillRect(x + width + 1, y-heigth, waitWidth-1, heigth+1);
-//            }
-//
-//            g.setColor(Color.lightGray);
-//            g.fillRect(x , y-heigth, width_tran, heigth+1);
-//            g.setColor(Color.BLACK);
-//            //距离显示
-////            g.drawString(String.valueOf(trantime),x, y-heigth);
-//        }
-//    }
-
     private void drawAxis(Graphics2D g) {
         setBackground(Color.white);
         g.setColor(Color.BLACK);
@@ -229,4 +187,7 @@ public class Gantt extends JPanel {
             name= "M"+(operation.getSeatId())+"-"+operation.getSeat().getStationPosition();
         return name;
     }
+
+    //Solution solution, Importer importer
+
 }

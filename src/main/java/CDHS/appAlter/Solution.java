@@ -40,9 +40,15 @@ public class Solution {
     public Map<Integer, Operation> getOperationMap() {
         return operationMap;
     }
-
     public double getMakespan() {
         return makespan;
+    }
+
+    public List<Operation> getOperationList() {
+        return operationList;
+    }
+    public Map<Long, List<Operation>> getOperationPlaneMap() {
+        return operationPlaneMap;
     }
 
     private void chromosomeToOperation(){
@@ -58,9 +64,6 @@ public class Solution {
         for (int i = 0; i < geneList.size()-Setting.NUM_OF_NEXT; i++) {
             for (int j = 0; j < geneList.get(i).size(); j++) {
                 int gene;
-//                if (i==geneList.size()-Setting.NUM_OF_NEXT)
-//                    gene = orderGenes.get(j);
-//                else
                     gene = geneList.get(i).get(j);
                 Operation operation = new Operation();
                 if (i==0){

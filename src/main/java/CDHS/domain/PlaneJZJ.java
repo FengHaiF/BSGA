@@ -2,7 +2,7 @@ package CDHS.domain;
 
 
 import CDHS.absplanner.AbstractPlane;
-import org.springframework.core.annotation.Order;
+//import org.springframework.core.annotation.Order;
 
 public class PlaneJZJ extends AbstractPlane {
     private Seat oilSeat;
@@ -54,14 +54,16 @@ public class PlaneJZJ extends AbstractPlane {
     }
 
     public long getPlaneOrderId(){
-        if (order == null)
+        if (order == null) {
             return -1;
+        }
         return order.getSeatId();
     }
 
     public long getPlaneOilSeatId(){
-        if (oilSeat == null)
+        if (oilSeat == null) {
             return -1;
+        }
         return oilSeat.getSeatId();
     }
 

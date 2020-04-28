@@ -48,16 +48,18 @@ public class Setting {
             case SET_MODE_01:
                 setDistTable(DIST_TABLE,DIST_PATH);
                 POPULATION_SIZE = 50;
-                LIMIT_GENERATION  = 15000;
+                LIMIT_GENERATION  = 30000;
                 NUM_OF_MATAINANCE = 2;
                 NUM_OF_NEXT = 1;
                 DATE = new Date();
                 break;
             case SET_MODE_02:
                 setDistTable(DIST_TABLE,DIST_PATH);
-                POPULATION_SIZE = 30;
-                LIMIT_GENERATION  = 50000;
+                POPULATION_SIZE = 50;
+                LIMIT_GENERATION  = 15000;
                 NUM_OF_MATAINANCE = 2;
+                NUM_OF_NEXT = 1;
+                DATE = new Date();
                 break;
             case SET_MODE_03:
                 break;
